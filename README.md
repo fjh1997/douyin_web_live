@@ -15,5 +15,5 @@
 5. `python3 main.py`
 
 Final thoughts :
- 1. Save data to mongodb
+ 1. ~~Save data to mongodb~~
  2. Charles alternative: maybe mitmproxy & scapy
