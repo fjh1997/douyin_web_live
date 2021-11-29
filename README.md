@@ -1,8 +1,9 @@
 ﻿**抖音直播间(web)弹幕抓取**
 
-Pre Requirements
-- Python3
-- Charles
+![enter image description here](https://github.com/gll19920817/tiktok_live/blob/main/WX20211129-144919@2x.png?raw=true)
+>  Pre Requirements
+	- Python3
+	- Charles
 
  1. `git clone https://github.com/gll19920817/tiktok_live`
  2. `pip install -r requirements.txt`
