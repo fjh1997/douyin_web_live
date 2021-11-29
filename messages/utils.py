@@ -36,31 +36,37 @@ def decodeMsg(messages):
             if message.method == 'WebcastMemberMessage':
                 member_message = MemberMessage()
                 member_message.set_payload(message.payload)
+                member_message.persists()
                 print(f"\n{RED}[+] {member_message} {RESET}")
 
             elif message.method == 'WebcastSocialMessage':
                 social_message = SocialMessage()
                 social_message.set_payload(message.payload)
+                social_message.persists()
                 print(f"\n{GREEN}[+] {social_message} {RESET}")
 
             elif message.method == 'WebcastChatMessage':
                 chat_message = ChatMessage()
                 chat_message.set_payload(message.payload)
+                chat_message.persists()
                 print(f"\n{BLUE}[+] {chat_message} {RESET}")
 
             elif message.method == 'WebcastLikeMessage':
                 like_message = LikeMessage()
                 like_message.set_payload(message.payload)
+                like_message.persists()
                 print(f"\n{CYAN}[+] {like_message} {RESET}")
 
             elif message.method == 'WebcastGiftMessage':
                 gift_message = GiftMessage()
                 gift_message.set_payload(message.payload)
+                gift_message.persists()
                 print(f"\n{MAGENTA}[+] {gift_message} {RESET}")
 
             elif message.method == 'WebcastRoomUserSeqMessage':
                 room_user_seq_message = RoomUserSeqMessage() 
                 room_user_seq_message.set_payload(message.payload)
+                # room_user_seq_message.persists()
                 print(f"\n{YELLOW}[+] {room_user_seq_message} {RESET}")
 
         except Exception as e:

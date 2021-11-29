@@ -419,6 +419,22 @@ message TextPiece{
 }
 
 message Image{
+    repeated string urlList = 1;
+    string uri = 2;
+    int64 height = 3;
+    int64 width = 4;
+    string avgColor = 5;
+    int32 imageType = 6;
+    string openWebUrl = 7;
+    Content content = 8;
+    bool isAnimated = 9;
+
+    message Content {
+        string name = 1;
+        string fontColor = 2;
+        int64 level = 3;
+        string alternativeText = 4;
+    }
 }
 
 message TextPieceUser{

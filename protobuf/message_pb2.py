@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\rmessage.proto\"\xa7\x02\n\x08Response\x12\x1a\n\x08messages\x18\x01 \x03(\x0b\x32\x08.Message\x12\x0e\n\x06\x63ursor\x18\x02 \x01(\t\x12\x15\n\rfetchInterval\x18\x03 \x01(\x03\x12\x0b\n\x03now\x18\x04 \x01(\x03\x12\x13\n\x0binternalExt\x18\x05 \x01(\t\x12\x11\n\tfetchType\x18\x06 \x01(\x05\x12/\n\x0brouteParams\x18\x07 \x03(\x0b\x32\x1a.Response.RouteParamsEntry\x12\x19\n\x11heartbeatDuration\x18\x08 \x01(\x03\x12\x0f\n\x07needAck\x18\t \x01(\x08\x12\x12\n\npushServer\x18\n \x01(\t\x1a\x32\n\x10RouteParamsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"Z\n\x07Message\x12\x0e\n\x06method\x18\x01 \x01(\t\x12\x0f\n\x07payload\x18\x02 \x01(\x0c\x12\r\n\x05msgId\x18\x03 \x01(\x03\x12\x0f\n\x07msgType\x18\x04 \x01(\x05\x12\x0e\n\x06offset\x18\x05 \x01(\x03\"\xc5\x03\n\x12RoomUserSeqMessage\x12\x17\n\x06\x63ommon\x18\x01 \x01(\x0b\x32\x07.Common\x12.\n\x05ranks\x18\x02 \x03(\x0b\x32\x1f.RoomUserSeqMessage.Contributor\x12\r\n\x05total\x18\x03 \x01(\x03\x12\x0e\n\x06popStr\x18\x04 \x01(\t\x12.\n\x05seats\x18\x05 \x03(\x0b\x32\x1f.RoomUserSeqMessage.Contributor\x12\x12\n\npopularity\x18\x06 \x01(\x03\x12\x11\n\ttotalUser\x18\x07 \x01(\x03\x12\x14\n\x0ctotalUserStr\x18\x08 \x01(\t\x12\x10\n\x08totalStr\x18\t \x01(\t\x12\x1b\n\x13onlineUserForAnchor\x18\n \x01(\t\x12\x18\n\x10totalPvForAnchor\x18\x0b \x01(\t\x1a\x90\x01\n\x0b\x43ontributor\x12\r\n\x05score\x18\x01 \x01(\x03\x12\x13\n\x04user\x18\x02 \x01(\x0b\x32\x05.User\x12\x0c\n\x04rank\x18\x03 \x01(\x03\x12\r\n\x05\x64\x65lta\x18\x04 \x01(\x03\x12\x10\n\x08isHidden\x18\x05 \x01(\x08\x12\x18\n\x10scoreDescription\x18\x06 \x01(\t\x12\x14\n\x0c\x65xactlyScore\x18\x07 \x01(\t\"\xee\x07\n\x0bGiftMessage\x12\x17\n\x06\x63ommon\x18\x01 \x01(\x0b\x32\x07.Common\x12\x0e\n\x06giftId\x18\x02 \x01(\x03\x12\x16\n\x0e\x66\x61nTicketCount\x18\x03 \x01(\x03\x12\x12\n\ngroupCount\x18\x04 \x01(\x03\x12\x13\n\x0brepeatCount\x18\x05 \x01(\x03\x12\x12\n\ncomboCount\x18\x06 \x01(\x03\x12\x13\n\x04user\x18\x07 \x01(\x0b\x32\x05.User\x12\x15\n\x06toUser\x18\x08 \x01(\x0b\x32\x05.User\x12\x11\n\trepeatEnd\x18\t \x01(\x05\x12+\n\ntextEffect\x18\n \x01(\x0b\x32\x17.GiftMessage.TextEffect\x12\x0f\n\x07groupId\x18\x0b \x01(\x03\x12\x17\n\x0fincomeTaskgifts\x18\x0c \x01(\x03\x12\x1a\n\x12roomFanTicketCount\x18\r \x01(\x03\x12!\n\x08priority\x18\x0e \x01(\x0b\x32\x0f.GiftIMPriority\x12\x19\n\x04gift\x18\x0f \x01(\x0b\x32\x0b.GiftStruct\x12\r\n\x05logId\x18\x10 \x01(\t\x12\x10\n\x08sendType\x18\x11 \x01(\x03\x12+\n\x10publicAreaCommon\x18\x12 \x01(\x0b\x32\x11.PublicAreaCommon\x12\x1e\n\x0ftrayDisplayText\x18\x13 \x01(\x0b\x32\x05.Text\x12\x1c\n\x14\x62\x61nnedDisplayEffects\x18\x14 \x01(\x03\x12\x1f\n\x08trayInfo\x18\x15 \x01(\x0b\x32\r.GiftTrayInfo\x12/\n\x12\x61ssetEffectMixInfo\x18\x18 \x01(\x0b\x32\x13.AssetEffectMixInfo\x1a\x92\x03\n\nTextEffect\x12\x30\n\x08portrait\x18\x01 \x01(\x0b\x32\x1e.GiftMessage.TextEffect.Detail\x12\x31\n\tlandscape\x18\x02 \x01(\x0b\x32\x1e.GiftMessage.TextEffect.Detail\x1a\x9e\x02\n\x06\x44\x65tail\x12\x13\n\x04text\x18\x01 \x01(\x0b\x32\x05.Text\x12\x14\n\x0ctextFontSize\x18\x02 \x01(\x05\x12\x1a\n\nbackground\x18\x03 \x01(\x0b\x32\x06.Image\x12\r\n\x05start\x18\x04 \x01(\x05\x12\x10\n\x08\x64uration\x18\x05 \x01(\x05\x12\t\n\x01x\x18\x06 \x01(\x05\x12\t\n\x01y\x18\x07 \x01(\x05\x12\r\n\x05width\x18\x08 \x01(\x05\x12\x0e\n\x06height\x18\t \x01(\x05\x12\x10\n\x08shadowDx\x18\n \x01(\x05\x12\x10\n\x08shadowDy\x18\x0b \x01(\x05\x12\x14\n\x0cshadowRadius\x18\x0c \x01(\x05\x12\x13\n\x0bshadowColor\x18\r \x01(\t\x12\x13\n\x0bstrokeColor\x18\x0e \x01(\t\x12\x13\n\x0bstrokeWidth\x18\x0f \x01(\x05\"v\n\x0bLikeMessage\x12\x17\n\x06\x63ommon\x18\x01 \x01(\x0b\x32\x07.Common\x12\r\n\x05\x63ount\x18\x02 \x01(\x03\x12\r\n\x05total\x18\x03 \x01(\x03\x12\r\n\x05\x63olor\x18\x04 \x01(\x03\x12\x13\n\x04user\x18\x05 \x01(\x0b\x32\x05.User\x12\x0c\n\x04icon\x18\x06 \x01(\t\"\x8e\x02\n\x0b\x43hatMessage\x12\x17\n\x06\x63ommon\x18\x01 \x01(\x0b\x32\x07.Common\x12\x13\n\x04user\x18\x02 \x01(\x0b\x32\x05.User\x12\x0f\n\x07\x63ontent\x18\x03 \x01(\t\x12\x17\n\x0fvisibleToSender\x18\x04 \x01(\x08\x12\x1f\n\x0f\x62\x61\x63kgroundImage\x18\x05 \x01(\x0b\x32\x06.Image\x12\x1b\n\x13\x66ullScreenTextColor\x18\x06 \x01(\t\x12!\n\x11\x62\x61\x63kgroundImageV2\x18\x07 \x01(\x0b\x32\x06.Image\x12+\n\x10publicAreaCommon\x18\t \x01(\x0b\x32\x11.PublicAreaCommon\x12\x19\n\tgiftImage\x18\n \x01(\x0b\x32\x06.Image\"\xb7\x01\n\rSocialMessage\x12\x17\n\x06\x63ommon\x18\x01 \x01(\x0b\x32\x07.Common\x12\x13\n\x04user\x18\x02 \x01(\x0b\x32\x05.User\x12\x11\n\tshareType\x18\x03 \x01(\x03\x12\x0e\n\x06\x61\x63tion\x18\x04 \x01(\x03\x12\x13\n\x0bshareTarget\x18\x05 \x01(\t\x12\x13\n\x0b\x66ollowCount\x18\x06 \x01(\x03\x12+\n\x10publicAreaCommon\x18\x07 \x01(\x0b\x32\x11.PublicAreaCommon\"\xf5\x06\n\rMemberMessage\x12\x17\n\x06\x63ommon\x18\x01 \x01(\x0b\x32\x07.Common\x12\x13\n\x04user\x18\x02 \x01(\x0b\x32\x05.User\x12\x13\n\x0bmemberCount\x18\x03 \x01(\x03\x12\x17\n\x08operator\x18\x04 \x01(\x0b\x32\x05.User\x12\x14\n\x0cisSetToAdmin\x18\x05 \x01(\x08\x12\x11\n\tisTopUser\x18\x06 \x01(\x08\x12\x11\n\trankScore\x18\x07 \x01(\x03\x12\x11\n\ttopUserNo\x18\x08 \x01(\x03\x12\x11\n\tenterType\x18\t \x01(\x03\x12\x0e\n\x06\x61\x63tion\x18\n \x01(\x03\x12\x19\n\x11\x61\x63tionDescription\x18\x0b \x01(\t\x12\x0e\n\x06userId\x18\x0c \x01(\x03\x12\x31\n\x0c\x65\x66\x66\x65\x63tConfig\x18\r \x01(\x0b\x32\x1b.MemberMessage.EffectConfig\x12\x0e\n\x06popStr\x18\x0e \x01(\t\x12\x36\n\x11\x65nterEffectConfig\x18\x0f \x01(\x0b\x32\x1b.MemberMessage.EffectConfig\x12\x1f\n\x0f\x62\x61\x63kgroundImage\x18\x10 \x01(\x0b\x32\x06.Image\x12!\n\x11\x62\x61\x63kgroundImageV2\x18\x11 \x01(\x0b\x32\x06.Image\x12 \n\x11\x61nchorDisplayText\x18\x12 \x01(\x0b\x32\x05.Text\x12+\n\x10publicAreaCommon\x18\x13 \x01(\x0b\x32\x11.PublicAreaCommon\x1a\xdc\x02\n\x0c\x45\x66\x66\x65\x63tConfig\x12\x0c\n\x04type\x18\x01 \x01(\x03\x12\x14\n\x04icon\x18\x02 \x01(\x0b\x32\x06.Image\x12\x11\n\tavatarPos\x18\x03 \x01(\x03\x12\x13\n\x04text\x18\x04 \x01(\x0b\x32\x05.Text\x12\x18\n\x08textIcon\x18\x05 \x01(\x0b\x32\x06.Image\x12\x10\n\x08stayTime\x18\x06 \x01(\x05\x12\x13\n\x0b\x61nimAssetId\x18\x07 \x01(\x03\x12\x15\n\x05\x62\x61\x64ge\x18\x08 \x01(\x0b\x32\x06.Image\x12\x18\n\x10\x66lexSettingArray\x18\t \x03(\x03\x12\x1f\n\x0ftextIconOverlay\x18\n \x01(\x0b\x32\x06.Image\x12\x1d\n\ranimatedBadge\x18\x0b \x01(\x0b\x32\x06.Image\x12\x15\n\rhasSweepLight\x18\x0c \x01(\x08\x12\x1c\n\x14textFlexSettingArray\x18\r \x03(\x03\x12\x19\n\x11\x63\x65nterAnimAssetId\x18\x0e \x01(\x03\"\x83\x03\n\x06\x43ommon\x12\x0e\n\x06method\x18\x01 \x01(\t\x12\r\n\x05msgId\x18\x02 \x01(\x03\x12\x0e\n\x06roomId\x18\x03 \x01(\x03\x12\x12\n\ncreateTime\x18\x04 \x01(\x03\x12\x0f\n\x07monitor\x18\x05 \x01(\x05\x12\x11\n\tisShowMsg\x18\x06 \x01(\x08\x12\x10\n\x08\x64\x65scribe\x18\x07 \x01(\t\x12\x1a\n\x0b\x64isplayText\x18\x08 \x01(\x0b\x32\x05.Text\x12\x10\n\x08\x66oldType\x18\t \x01(\x03\x12\x16\n\x0e\x61nchorFoldType\x18\n \x01(\x03\x12\x15\n\rpriorityScore\x18\x0b \x01(\x03\x12\r\n\x05logId\x18\x0c \x01(\t\x12\x19\n\x11msgProcessFilterK\x18\r \x01(\t\x12\x19\n\x11msgProcessFilterV\x18\x0e \x01(\t\x12\x13\n\x04user\x18\x0f \x01(\x0b\x32\x05.User\x12\x13\n\x04room\x18\x10 \x01(\x0b\x32\x05.Room\x12\x18\n\x10\x61nchorFoldTypeV2\x18\x11 \x01(\x03\x12\x1a\n\x12processAtSeiTimeMs\x18\x12 \x01(\x03\"k\n\x04Text\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x16\n\x0e\x64\x65\x66\x61ultPattern\x18\x02 \x01(\t\x12\"\n\rdefaultFormat\x18\x03 \x01(\x0b\x32\x0b.TextFormat\x12\x1a\n\x06pieces\x18\x04 \x03(\x0b\x32\n.TextPiece\"\xa9\x08\n\x04Room\x12\n\n\x02id\x18\x01 \x01(\x03\x12\r\n\x05idStr\x18\x02 \x01(\t\x12\x0e\n\x06status\x18\x03 \x01(\x03\x12\x13\n\x0bownerUserId\x18\x04 \x01(\x03\x12\r\n\x05title\x18\x05 \x01(\t\x12\x11\n\tuserCount\x18\x06 \x01(\x03\x12\x12\n\ncreateTime\x18\x07 \x01(\x03\x12\x15\n\rlinkmicLayout\x18\x08 \x01(\x03\x12\x12\n\nfinishTime\x18\t \x01(\x03\x12\x19\n\x05\x65xtra\x18\n \x01(\x0b\x32\n.RoomExtra\x12\x17\n\x0f\x64ynamicCoverUri\x18\x0b \x01(\t\x12\x35\n\x10\x64ynamicCoverDict\x18\x0c \x03(\x0b\x32\x1b.Room.DynamicCoverDictEntry\x12\x14\n\x0clastPingTime\x18\r \x01(\x03\x12\x0e\n\x06liveId\x18\x0e \x01(\x03\x12\x16\n\x0estreamProvider\x18\x0f \x01(\x03\x12\x0e\n\x06osType\x18\x10 \x01(\x03\x12\x15\n\rclientVersion\x18\x11 \x01(\x03\x12\x13\n\x0bwithLinkmic\x18\x12 \x01(\x08\x12\x1d\n\x15\x65nableRoomPerspective\x18\x13 \x01(\x08\x12\x15\n\x05\x63over\x18\x14 \x01(\x0b\x32\x06.Image\x12\x1c\n\x0c\x64ynamicCover\x18\x15 \x01(\x0b\x32\x06.Image\x12\x1f\n\x0f\x64ynamicCoverLow\x18\x16 \x01(\x0b\x32\x06.Image\x12\x10\n\x08shareUrl\x18\x17 \x01(\t\x12\x17\n\x0f\x61nchorShareText\x18\x18 \x01(\t\x12\x15\n\ruserShareText\x18\x19 \x01(\t\x12\x10\n\x08streamId\x18\x1a \x01(\x03\x12\x13\n\x0bstreamIdStr\x18\x1b \x01(\t\x12\x1d\n\tstreamUrl\x18\x1c \x01(\x0b\x32\n.StreamUrl\x12\x14\n\x0cmosaicStatus\x18\x1d \x01(\x03\x12\x11\n\tmosaicTip\x18\x1e \x01(\t\x12\x11\n\tcellStyle\x18\x1f \x01(\x03\x12\x19\n\x07linkMic\x18  \x01(\x0b\x32\x08.LinkMic\x12\x15\n\rluckymoneyNum\x18! \x01(\x03\x12\x1d\n\x08\x64\x65\x63oList\x18\" \x03(\x0b\x32\x0b.Decoration\x12\x18\n\x07topFans\x18# \x03(\x0b\x32\x07.TopFan\x12\x19\n\x05stats\x18$ \x01(\x0b\x32\n.RoomStats\x12\x1b\n\x13sunDailyIconContent\x18% \x01(\t\x12\x10\n\x08\x64istance\x18& \x01(\t\x12\x14\n\x0c\x64istanceCity\x18\' \x01(\t\x12\x10\n\x08location\x18( \x01(\t\x12\x14\n\x0crealDistance\x18) \x01(\t\x12\x1d\n\rfeedRoomLabel\x18* \x01(\x0b\x32\x06.Image\x12\x17\n\x0f\x63ommonLabelList\x18+ \x01(\t\x1a\x37\n\x15\x44ynamicCoverDictEntry\x12\x0b\n\x03key\x18\x01 \x01(\x03\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\x0b\n\tRoomExtra\"\x0b\n\tRoomStats\"\x0b\n\tStreamUrl\"\t\n\x07LinkMic\"\x0c\n\nDecoration\"\x08\n\x06TopFan\"\xf2\x14\n\x04User\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x0f\n\x07shortId\x18\x02 \x01(\x03\x12\x10\n\x08nickname\x18\x03 \x01(\t\x12\x0e\n\x06gender\x18\x04 \x01(\x05\x12\x11\n\tsignature\x18\x05 \x01(\t\x12\r\n\x05level\x18\x06 \x01(\x05\x12\x10\n\x08\x62irthday\x18\x07 \x01(\x03\x12\x11\n\ttelephone\x18\x08 \x01(\t\x12\x1b\n\x0b\x61vatarThumb\x18\t \x01(\x0b\x32\x06.Image\x12\x1c\n\x0c\x61vatarMedium\x18\n \x01(\x0b\x32\x06.Image\x12\x1b\n\x0b\x61vatarLarge\x18\x0b \x01(\x0b\x32\x06.Image\x12\x10\n\x08verified\x18\x0c \x01(\x08\x12\x12\n\nexperience\x18\r \x01(\x05\x12\x0c\n\x04\x63ity\x18\x0e \x01(\t\x12\x0e\n\x06status\x18\x0f \x01(\x05\x12\x12\n\ncreateTime\x18\x10 \x01(\x03\x12\x12\n\nmodifyTime\x18\x11 \x01(\x03\x12\x0e\n\x06secret\x18\x12 \x01(\x05\x12\x16\n\x0eshareQrcodeUri\x18\x13 \x01(\t\x12\x1a\n\x12incomeSharePercent\x18\x14 \x01(\x05\x12\x1e\n\x0e\x62\x61\x64geImageList\x18\x15 \x01(\x0b\x32\x06.Image\x12$\n\nfollowInfo\x18\x16 \x01(\x0b\x32\x10.User.FollowInfo\x12 \n\x08payGrade\x18\x17 \x01(\x0b\x32\x0e.User.PayGrade\x12 \n\x08\x66\x61nsClub\x18\x18 \x01(\x0b\x32\x0e.User.FansClub\x12\x1c\n\x06\x62order\x18\x19 \x01(\x0b\x32\x0c.User.Border\x12\x11\n\tspecialId\x18\x1a \x01(\t\x12\x1c\n\x0c\x61vatarBorder\x18\x1b \x01(\x0b\x32\x06.Image\x12\x15\n\x05medal\x18\x1c \x01(\x0b\x32\x06.Image\x12\x1d\n\rrealTimeIcons\x18\x1d \x03(\x0b\x32\x06.Image\x12 \n\x10newRealTimeIcons\x18\x1e \x03(\x0b\x32\x06.Image\x12\x10\n\x08topVipNo\x18\x1f \x01(\x03\x12 \n\x08userAttr\x18  \x01(\x0b\x32\x0e.User.UserAttr\x12\x1e\n\x07ownRoom\x18! \x01(\x0b\x32\r.User.OwnRoom\x12\x10\n\x08payScore\x18\" \x01(\x03\x12\x13\n\x0bticketCount\x18# \x01(\x03\x12$\n\nanchorInfo\x18$ \x01(\x0b\x32\x10.User.AnchorInfo\x12\x14\n\x0clinkMicStats\x18% \x01(\x05\x12\x11\n\tdisplayId\x18& \x01(\t\x1a\n\n\x08UserAttr\x1a\t\n\x07OwnRoom\x1a\x0c\n\nAnchorInfo\x1ay\n\nFollowInfo\x12\x16\n\x0e\x66ollowingCount\x18\x01 \x01(\x03\x12\x15\n\rfollowerCount\x18\x02 \x01(\x03\x12\x14\n\x0c\x66ollowStatus\x18\x03 \x01(\x03\x12\x12\n\npushStatus\x18\x04 \x01(\x03\x12\x12\n\nremarkName\x18\x05 \x01(\t\x1a\xfd\x03\n\x08\x46\x61nsClub\x12)\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x1b.User.FansClub.FansClubData\x12\x32\n\npreferData\x18\x02 \x03(\x0b\x32\x1e.User.FansClub.PreferDataEntry\x1aN\n\x0fPreferDataEntry\x12\x0b\n\x03key\x18\x01 \x01(\x05\x12*\n\x05value\x18\x02 \x01(\x0b\x32\x1b.User.FansClub.FansClubData:\x02\x38\x01\x1a\xc1\x02\n\x0c\x46\x61nsClubData\x12\x10\n\x08\x63lubName\x18\x01 \x01(\t\x12\r\n\x05level\x18\x02 \x01(\x05\x12\x1a\n\x12userFansClubStatus\x18\x03 \x01(\x05\x12\x34\n\x05\x62\x61\x64ge\x18\x04 \x01(\x0b\x32%.User.FansClub.FansClubData.UserBadge\x12\x18\n\x10\x61vailableGiftIds\x18\x05 \x03(\x03\x12\x10\n\x08\x61nchorId\x18\x06 \x01(\x03\x1a\x91\x01\n\tUserBadge\x12?\n\x05icons\x18\x01 \x03(\x0b\x32\x30.User.FansClub.FansClubData.UserBadge.IconsEntry\x12\r\n\x05title\x18\x02 \x01(\t\x1a\x34\n\nIconsEntry\x12\x0b\n\x03key\x18\x01 \x01(\x05\x12\x15\n\x05value\x18\x02 \x01(\x0b\x32\x06.Image:\x02\x38\x01\x1a\x08\n\x06\x42order\x1a\xc7\x01\n\rGradeBuffInfo\x12\x11\n\tbuffLevel\x18\x01 \x01(\x03\x12\x0e\n\x06status\x18\x02 \x01(\x05\x12\x0f\n\x07\x65ndTime\x18\x03 \x01(\x03\x12\x35\n\tstatsInfo\x18\x04 \x03(\x0b\x32\".User.GradeBuffInfo.StatsInfoEntry\x12\x19\n\tbuffBadge\x18\x05 \x01(\x0b\x32\x06.Image\x1a\x30\n\x0eStatsInfoEntry\x12\x0b\n\x03key\x18\x01 \x01(\x03\x12\r\n\x05value\x18\x02 \x01(\x03:\x02\x38\x01\x1a\xec\x06\n\x08PayGrade\x12\x19\n\x11totalDiamondCount\x18\x01 \x01(\x03\x12\x1b\n\x0b\x64iamondIcon\x18\x02 \x01(\x0b\x32\x06.Image\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x14\n\x04icon\x18\x04 \x01(\x0b\x32\x06.Image\x12\x10\n\x08nextName\x18\x05 \x01(\t\x12\r\n\x05level\x18\x06 \x01(\x03\x12\x18\n\x08nextIcon\x18\x07 \x01(\x0b\x32\x06.Image\x12\x13\n\x0bnextDiamond\x18\x08 \x01(\x03\x12\x12\n\nnowDiamond\x18\t \x01(\x03\x12\x1b\n\x13thisGradeMinDiamond\x18\n \x01(\x03\x12\x1b\n\x13thisGradeMaxDiamond\x18\x0b \x01(\x03\x12\x15\n\rpayDiamondBak\x18\x0c \x01(\x03\x12\x15\n\rgradeDescribe\x18\r \x01(\t\x12/\n\rgradeIconList\x18\x0e \x03(\x0b\x32\x18.User.PayGrade.GradeIcon\x12\x16\n\x0escreenChatType\x18\x0f \x01(\x03\x12\x16\n\x06imIcon\x18\x10 \x01(\x0b\x32\x06.Image\x12\x1f\n\x0fimIconWithLevel\x18\x11 \x01(\x0b\x32\x06.Image\x12\x18\n\x08liveIcon\x18\x12 \x01(\x0b\x32\x06.Image\x12\"\n\x12newImIconWithLevel\x18\x13 \x01(\x0b\x32\x06.Image\x12\x1b\n\x0bnewLiveIcon\x18\x14 \x01(\x0b\x32\x06.Image\x12\x1a\n\x12upgradeNeedConsume\x18\x15 \x01(\x03\x12\x16\n\x0enextPrivileges\x18\x16 \x01(\t\x12\x1a\n\nbackground\x18\x17 \x01(\x0b\x32\x06.Image\x12\x1e\n\x0e\x62\x61\x63kgroundBack\x18\x18 \x01(\x0b\x32\x06.Image\x12\r\n\x05score\x18\x19 \x01(\x03\x12%\n\x08\x62uffInfo\x18\x1a \x01(\x0b\x32\x13.User.GradeBuffInfo\x12\x14\n\x0bgradeBanner\x18\xe9\x07 \x01(\t\x12 \n\x0fprofileDialogBg\x18\xea\x07 \x01(\x0b\x32\x06.Image\x12$\n\x13profileDialogBgBack\x18\xeb\x07 \x01(\x0b\x32\x06.Image\x1aW\n\tGradeIcon\x12\x14\n\x04icon\x18\x01 \x01(\x0b\x32\x06.Image\x12\x13\n\x0biconDiamond\x18\x02 \x01(\x03\x12\r\n\x05level\x18\x03 \x01(\x03\x12\x10\n\x08levelStr\x18\x04 \x01(\t\"\xa5\x01\n\nTextFormat\x12\r\n\x05\x63olor\x18\x01 \x01(\t\x12\x0c\n\x04\x62old\x18\x02 \x01(\x08\x12\x0e\n\x06italic\x18\x03 \x01(\x08\x12\x0e\n\x06weight\x18\x04 \x01(\x05\x12\x13\n\x0bitalicAngle\x18\x05 \x01(\x05\x12\x10\n\x08\x66ontSize\x18\x06 \x01(\x05\x12\x1c\n\x14userHeightLightColor\x18\x07 \x01(\x08\x12\x15\n\ruseRemoteClor\x18\x08 \x01(\x08\"n\n\tTextPiece\x12\x0c\n\x04type\x18\x01 \x01(\x05\x12\x1b\n\x06\x66ormat\x18\x02 \x01(\x0b\x32\x0b.TextFormat\x12\x13\n\x0bstringValue\x18\x0b \x01(\t\x12!\n\tuserValue\x18\x15 \x01(\x0b\x32\x0e.TextPieceUser\"\x07\n\x05Image\"7\n\rTextPieceUser\x12\x13\n\x04user\x18\x01 \x01(\x0b\x32\x05.User\x12\x11\n\twithColon\x18\x02 \x01(\x08\"g\n\x10PublicAreaCommon\x12\x19\n\tuserLabel\x18\x01 \x01(\x0b\x32\x06.Image\x12\x19\n\x11userConsumeInRoom\x18\x02 \x01(\x03\x12\x1d\n\x15userSendGiftCntInRoom\x18\x03 \x01(\x03\"Q\n\x0eGiftIMPriority\x12\x12\n\nqueueSizes\x18\x01 \x03(\x03\x12\x19\n\x11selfQueuePriority\x18\x02 \x01(\x03\x12\x10\n\x08priority\x18\x03 \x01(\x03\"\xb9\x01\n\x0cGiftTrayInfo\x12\x1e\n\x0ftrayDisplayText\x18\x01 \x01(\x0b\x32\x05.Text\x12\x1b\n\x0btrayBaseImg\x18\x02 \x01(\x0b\x32\x06.Image\x12\x1b\n\x0btrayHeadImg\x18\x03 \x01(\x0b\x32\x06.Image\x12\x1c\n\x0ctrayRightImg\x18\x04 \x01(\x0b\x32\x06.Image\x12\x11\n\ttrayLevel\x18\x05 \x01(\x03\x12\x1e\n\x0etrayDynamicImg\x18\x06 \x01(\x0b\x32\x06.Image\"\x84\x0c\n\nGiftStruct\x12\x15\n\x05image\x18\x01 \x01(\x0b\x32\x06.Image\x12\x10\n\x08\x64\x65scribe\x18\x02 \x01(\t\x12\x0e\n\x06notify\x18\x03 \x01(\x08\x12\x10\n\x08\x64uration\x18\x04 \x01(\x03\x12\n\n\x02id\x18\x05 \x01(\x03\x12\x38\n\x0c\x66\x61nsclubInfo\x18\x06 \x01(\x0b\x32\".GiftStruct.GiftStructFansClubInfo\x12\x12\n\nforLinkmic\x18\x07 \x01(\x08\x12\x0e\n\x06\x64oodle\x18\x08 \x01(\x08\x12\x13\n\x0b\x66orFansclub\x18\t \x01(\x08\x12\r\n\x05\x63ombo\x18\n \x01(\x08\x12\x0c\n\x04type\x18\x0b \x01(\x05\x12\x14\n\x0c\x64iamondCount\x18\x0c \x01(\x05\x12\x1a\n\x12isDisplayedOnPanel\x18\r \x01(\x05\x12\x17\n\x0fprimaryEffectId\x18\x0e \x01(\x03\x12\x1d\n\rgiftLabelIcon\x18\x0f \x01(\x0b\x32\x06.Image\x12\x0c\n\x04name\x18\x10 \x01(\t\x12\x0e\n\x06region\x18\x11 \x01(\t\x12\x0e\n\x06manual\x18\x12 \x01(\t\x12\x11\n\tforCustom\x18\x13 \x01(\x08\x12\x37\n\x0especialEffects\x18\x14 \x03(\x0b\x32\x1f.GiftStruct.SpecialEffectsEntry\x12\x14\n\x04icon\x18\x15 \x01(\x0b\x32\x06.Image\x12\x12\n\nactionType\x18\x16 \x01(\x05\x12\x17\n\x0fwatermelonSeeds\x18\x17 \x01(\x05\x12\x12\n\ngoldEffect\x18\x18 \x01(\t\x12!\n\x04subs\x18\x19 \x03(\x0b\x32\x13.LuckyMoneyGiftMeta\x12\x13\n\x0bgoldenBeans\x18\x1a \x01(\x03\x12\x12\n\nhonorLevel\x18\x1b \x01(\x03\x12\x10\n\x08itemType\x18\x1c \x01(\x05\x12\x11\n\tschemeUrl\x18\x1d \x01(\t\x12*\n\rgiftOperation\x18\x1e \x01(\x0b\x32\x13.GiftPanelOperation\x12\x11\n\teventName\x18\x1f \x01(\t\x12\x12\n\nnobleLevel\x18  \x01(\x03\x12\x10\n\x08guideUrl\x18! \x01(\t\x12\x16\n\x0epunishMedicine\x18\" \x01(\x08\x12\x11\n\tforPortal\x18# \x01(\x08\x12\x14\n\x0c\x62usinessText\x18$ \x01(\t\x12\x0f\n\x07\x63nyGift\x18% \x01(\x08\x12\r\n\x05\x61ppId\x18& \x01(\x03\x12\x10\n\x08vipLevel\x18\' \x01(\x03\x12\x0e\n\x06isGray\x18( \x01(\x08\x12\x15\n\rgraySchemeUrl\x18) \x01(\t\x12\x11\n\tgiftScene\x18* \x01(\x03\x12\x1f\n\ngiftBanner\x18+ \x01(\x0b\x32\x0b.GiftBanner\x12\x14\n\x0ctriggerWords\x18, \x03(\t\x12$\n\rgiftBuffInfos\x18- \x03(\x0b\x32\r.GiftBuffInfo\x12\x18\n\x10\x66orFirstRecharge\x18. \x01(\x08\x12%\n\x15\x64ynamicImgForSelected\x18/ \x01(\x0b\x32\x06.Image\x12\x17\n\x0f\x61\x66terSendAction\x18\x30 \x01(\x05\x12\x17\n\x0fgiftOfflineTime\x18\x31 \x01(\x03\x12\x12\n\ntopBarText\x18\x32 \x01(\t\x12\x1e\n\x0etopRightAvatar\x18\x33 \x01(\x0b\x32\x06.Image\x12\x17\n\x0f\x62\x61nnerSchemeUrl\x18\x34 \x01(\t\x12\x10\n\x08isLocked\x18\x35 \x01(\x08\x12\x14\n\x0creqExtraType\x18\x36 \x01(\x03\x12\x10\n\x08\x61ssetIds\x18\x37 \x03(\x03\x12)\n\x0fgiftPreviewInfo\x18\x38 \x01(\x0b\x32\x10.GiftPreviewInfo\x12\x19\n\x07giftTip\x18\x39 \x01(\x0b\x32\x08.GiftTip\x12\x1b\n\x13needSweepLightCount\x18: \x01(\x05\x12!\n\tgroupInfo\x18; \x03(\x0b\x32\x0e.GiftGroupInfo\x1a\x35\n\x13SpecialEffectsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x03:\x02\x38\x01\x1a=\n\x16GiftStructFansClubInfo\x12\x10\n\x08minLevel\x18\x01 \x01(\x05\x12\x11\n\tinsertPos\x18\x02 \x01(\x05\"\x14\n\x12\x41ssetEffectMixInfo\"\x14\n\x12LuckyMoneyGiftMeta\"\x14\n\x12GiftPanelOperation\"\x0c\n\nGiftBanner\"\x0e\n\x0cGiftBuffInfo\"\x11\n\x0fGiftPreviewInfo\"\t\n\x07GiftTip\"\x0f\n\rGiftGroupInfo\"\x14\n\x12\x45\x66\x66\x65\x63tMixImageInfob\x06proto3'
+  serialized_pb=b'\n\rmessage.proto\"\xa7\x02\n\x08Response\x12\x1a\n\x08messages\x18\x01 \x03(\x0b\x32\x08.Message\x12\x0e\n\x06\x63ursor\x18\x02 \x01(\t\x12\x15\n\rfetchInterval\x18\x03 \x01(\x03\x12\x0b\n\x03now\x18\x04 \x01(\x03\x12\x13\n\x0binternalExt\x18\x05 \x01(\t\x12\x11\n\tfetchType\x18\x06 \x01(\x05\x12/\n\x0brouteParams\x18\x07 \x03(\x0b\x32\x1a.Response.RouteParamsEntry\x12\x19\n\x11heartbeatDuration\x18\x08 \x01(\x03\x12\x0f\n\x07needAck\x18\t \x01(\x08\x12\x12\n\npushServer\x18\n \x01(\t\x1a\x32\n\x10RouteParamsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"Z\n\x07Message\x12\x0e\n\x06method\x18\x01 \x01(\t\x12\x0f\n\x07payload\x18\x02 \x01(\x0c\x12\r\n\x05msgId\x18\x03 \x01(\x03\x12\x0f\n\x07msgType\x18\x04 \x01(\x05\x12\x0e\n\x06offset\x18\x05 \x01(\x03\"\xc5\x03\n\x12RoomUserSeqMessage\x12\x17\n\x06\x63ommon\x18\x01 \x01(\x0b\x32\x07.Common\x12.\n\x05ranks\x18\x02 \x03(\x0b\x32\x1f.RoomUserSeqMessage.Contributor\x12\r\n\x05total\x18\x03 \x01(\x03\x12\x0e\n\x06popStr\x18\x04 \x01(\t\x12.\n\x05seats\x18\x05 \x03(\x0b\x32\x1f.RoomUserSeqMessage.Contributor\x12\x12\n\npopularity\x18\x06 \x01(\x03\x12\x11\n\ttotalUser\x18\x07 \x01(\x03\x12\x14\n\x0ctotalUserStr\x18\x08 \x01(\t\x12\x10\n\x08totalStr\x18\t \x01(\t\x12\x1b\n\x13onlineUserForAnchor\x18\n \x01(\t\x12\x18\n\x10totalPvForAnchor\x18\x0b \x01(\t\x1a\x90\x01\n\x0b\x43ontributor\x12\r\n\x05score\x18\x01 \x01(\x03\x12\x13\n\x04user\x18\x02 \x01(\x0b\x32\x05.User\x12\x0c\n\x04rank\x18\x03 \x01(\x03\x12\r\n\x05\x64\x65lta\x18\x04 \x01(\x03\x12\x10\n\x08isHidden\x18\x05 \x01(\x08\x12\x18\n\x10scoreDescription\x18\x06 \x01(\t\x12\x14\n\x0c\x65xactlyScore\x18\x07 \x01(\t\"\xee\x07\n\x0bGiftMessage\x12\x17\n\x06\x63ommon\x18\x01 \x01(\x0b\x32\x07.Common\x12\x0e\n\x06giftId\x18\x02 \x01(\x03\x12\x16\n\x0e\x66\x61nTicketCount\x18\x03 \x01(\x03\x12\x12\n\ngroupCount\x18\x04 \x01(\x03\x12\x13\n\x0brepeatCount\x18\x05 \x01(\x03\x12\x12\n\ncomboCount\x18\x06 \x01(\x03\x12\x13\n\x04user\x18\x07 \x01(\x0b\x32\x05.User\x12\x15\n\x06toUser\x18\x08 \x01(\x0b\x32\x05.User\x12\x11\n\trepeatEnd\x18\t \x01(\x05\x12+\n\ntextEffect\x18\n \x01(\x0b\x32\x17.GiftMessage.TextEffect\x12\x0f\n\x07groupId\x18\x0b \x01(\x03\x12\x17\n\x0fincomeTaskgifts\x18\x0c \x01(\x03\x12\x1a\n\x12roomFanTicketCount\x18\r \x01(\x03\x12!\n\x08priority\x18\x0e \x01(\x0b\x32\x0f.GiftIMPriority\x12\x19\n\x04gift\x18\x0f \x01(\x0b\x32\x0b.GiftStruct\x12\r\n\x05logId\x18\x10 \x01(\t\x12\x10\n\x08sendType\x18\x11 \x01(\x03\x12+\n\x10publicAreaCommon\x18\x12 \x01(\x0b\x32\x11.PublicAreaCommon\x12\x1e\n\x0ftrayDisplayText\x18\x13 \x01(\x0b\x32\x05.Text\x12\x1c\n\x14\x62\x61nnedDisplayEffects\x18\x14 \x01(\x03\x12\x1f\n\x08trayInfo\x18\x15 \x01(\x0b\x32\r.GiftTrayInfo\x12/\n\x12\x61ssetEffectMixInfo\x18\x18 \x01(\x0b\x32\x13.AssetEffectMixInfo\x1a\x92\x03\n\nTextEffect\x12\x30\n\x08portrait\x18\x01 \x01(\x0b\x32\x1e.GiftMessage.TextEffect.Detail\x12\x31\n\tlandscape\x18\x02 \x01(\x0b\x32\x1e.GiftMessage.TextEffect.Detail\x1a\x9e\x02\n\x06\x44\x65tail\x12\x13\n\x04text\x18\x01 \x01(\x0b\x32\x05.Text\x12\x14\n\x0ctextFontSize\x18\x02 \x01(\x05\x12\x1a\n\nbackground\x18\x03 \x01(\x0b\x32\x06.Image\x12\r\n\x05start\x18\x04 \x01(\x05\x12\x10\n\x08\x64uration\x18\x05 \x01(\x05\x12\t\n\x01x\x18\x06 \x01(\x05\x12\t\n\x01y\x18\x07 \x01(\x05\x12\r\n\x05width\x18\x08 \x01(\x05\x12\x0e\n\x06height\x18\t \x01(\x05\x12\x10\n\x08shadowDx\x18\n \x01(\x05\x12\x10\n\x08shadowDy\x18\x0b \x01(\x05\x12\x14\n\x0cshadowRadius\x18\x0c \x01(\x05\x12\x13\n\x0bshadowColor\x18\r \x01(\t\x12\x13\n\x0bstrokeColor\x18\x0e \x01(\t\x12\x13\n\x0bstrokeWidth\x18\x0f \x01(\x05\"v\n\x0bLikeMessage\x12\x17\n\x06\x63ommon\x18\x01 \x01(\x0b\x32\x07.Common\x12\r\n\x05\x63ount\x18\x02 \x01(\x03\x12\r\n\x05total\x18\x03 \x01(\x03\x12\r\n\x05\x63olor\x18\x04 \x01(\x03\x12\x13\n\x04user\x18\x05 \x01(\x0b\x32\x05.User\x12\x0c\n\x04icon\x18\x06 \x01(\t\"\x8e\x02\n\x0b\x43hatMessage\x12\x17\n\x06\x63ommon\x18\x01 \x01(\x0b\x32\x07.Common\x12\x13\n\x04user\x18\x02 \x01(\x0b\x32\x05.User\x12\x0f\n\x07\x63ontent\x18\x03 \x01(\t\x12\x17\n\x0fvisibleToSender\x18\x04 \x01(\x08\x12\x1f\n\x0f\x62\x61\x63kgroundImage\x18\x05 \x01(\x0b\x32\x06.Image\x12\x1b\n\x13\x66ullScreenTextColor\x18\x06 \x01(\t\x12!\n\x11\x62\x61\x63kgroundImageV2\x18\x07 \x01(\x0b\x32\x06.Image\x12+\n\x10publicAreaCommon\x18\t \x01(\x0b\x32\x11.PublicAreaCommon\x12\x19\n\tgiftImage\x18\n \x01(\x0b\x32\x06.Image\"\xb7\x01\n\rSocialMessage\x12\x17\n\x06\x63ommon\x18\x01 \x01(\x0b\x32\x07.Common\x12\x13\n\x04user\x18\x02 \x01(\x0b\x32\x05.User\x12\x11\n\tshareType\x18\x03 \x01(\x03\x12\x0e\n\x06\x61\x63tion\x18\x04 \x01(\x03\x12\x13\n\x0bshareTarget\x18\x05 \x01(\t\x12\x13\n\x0b\x66ollowCount\x18\x06 \x01(\x03\x12+\n\x10publicAreaCommon\x18\x07 \x01(\x0b\x32\x11.PublicAreaCommon\"\xf5\x06\n\rMemberMessage\x12\x17\n\x06\x63ommon\x18\x01 \x01(\x0b\x32\x07.Common\x12\x13\n\x04user\x18\x02 \x01(\x0b\x32\x05.User\x12\x13\n\x0bmemberCount\x18\x03 \x01(\x03\x12\x17\n\x08operator\x18\x04 \x01(\x0b\x32\x05.User\x12\x14\n\x0cisSetToAdmin\x18\x05 \x01(\x08\x12\x11\n\tisTopUser\x18\x06 \x01(\x08\x12\x11\n\trankScore\x18\x07 \x01(\x03\x12\x11\n\ttopUserNo\x18\x08 \x01(\x03\x12\x11\n\tenterType\x18\t \x01(\x03\x12\x0e\n\x06\x61\x63tion\x18\n \x01(\x03\x12\x19\n\x11\x61\x63tionDescription\x18\x0b \x01(\t\x12\x0e\n\x06userId\x18\x0c \x01(\x03\x12\x31\n\x0c\x65\x66\x66\x65\x63tConfig\x18\r \x01(\x0b\x32\x1b.MemberMessage.EffectConfig\x12\x0e\n\x06popStr\x18\x0e \x01(\t\x12\x36\n\x11\x65nterEffectConfig\x18\x0f \x01(\x0b\x32\x1b.MemberMessage.EffectConfig\x12\x1f\n\x0f\x62\x61\x63kgroundImage\x18\x10 \x01(\x0b\x32\x06.Image\x12!\n\x11\x62\x61\x63kgroundImageV2\x18\x11 \x01(\x0b\x32\x06.Image\x12 \n\x11\x61nchorDisplayText\x18\x12 \x01(\x0b\x32\x05.Text\x12+\n\x10publicAreaCommon\x18\x13 \x01(\x0b\x32\x11.PublicAreaCommon\x1a\xdc\x02\n\x0c\x45\x66\x66\x65\x63tConfig\x12\x0c\n\x04type\x18\x01 \x01(\x03\x12\x14\n\x04icon\x18\x02 \x01(\x0b\x32\x06.Image\x12\x11\n\tavatarPos\x18\x03 \x01(\x03\x12\x13\n\x04text\x18\x04 \x01(\x0b\x32\x05.Text\x12\x18\n\x08textIcon\x18\x05 \x01(\x0b\x32\x06.Image\x12\x10\n\x08stayTime\x18\x06 \x01(\x05\x12\x13\n\x0b\x61nimAssetId\x18\x07 \x01(\x03\x12\x15\n\x05\x62\x61\x64ge\x18\x08 \x01(\x0b\x32\x06.Image\x12\x18\n\x10\x66lexSettingArray\x18\t \x03(\x03\x12\x1f\n\x0ftextIconOverlay\x18\n \x01(\x0b\x32\x06.Image\x12\x1d\n\ranimatedBadge\x18\x0b \x01(\x0b\x32\x06.Image\x12\x15\n\rhasSweepLight\x18\x0c \x01(\x08\x12\x1c\n\x14textFlexSettingArray\x18\r \x03(\x03\x12\x19\n\x11\x63\x65nterAnimAssetId\x18\x0e \x01(\x03\"\x83\x03\n\x06\x43ommon\x12\x0e\n\x06method\x18\x01 \x01(\t\x12\r\n\x05msgId\x18\x02 \x01(\x03\x12\x0e\n\x06roomId\x18\x03 \x01(\x03\x12\x12\n\ncreateTime\x18\x04 \x01(\x03\x12\x0f\n\x07monitor\x18\x05 \x01(\x05\x12\x11\n\tisShowMsg\x18\x06 \x01(\x08\x12\x10\n\x08\x64\x65scribe\x18\x07 \x01(\t\x12\x1a\n\x0b\x64isplayText\x18\x08 \x01(\x0b\x32\x05.Text\x12\x10\n\x08\x66oldType\x18\t \x01(\x03\x12\x16\n\x0e\x61nchorFoldType\x18\n \x01(\x03\x12\x15\n\rpriorityScore\x18\x0b \x01(\x03\x12\r\n\x05logId\x18\x0c \x01(\t\x12\x19\n\x11msgProcessFilterK\x18\r \x01(\t\x12\x19\n\x11msgProcessFilterV\x18\x0e \x01(\t\x12\x13\n\x04user\x18\x0f \x01(\x0b\x32\x05.User\x12\x13\n\x04room\x18\x10 \x01(\x0b\x32\x05.Room\x12\x18\n\x10\x61nchorFoldTypeV2\x18\x11 \x01(\x03\x12\x1a\n\x12processAtSeiTimeMs\x18\x12 \x01(\x03\"k\n\x04Text\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\x16\n\x0e\x64\x65\x66\x61ultPattern\x18\x02 \x01(\t\x12\"\n\rdefaultFormat\x18\x03 \x01(\x0b\x32\x0b.TextFormat\x12\x1a\n\x06pieces\x18\x04 \x03(\x0b\x32\n.TextPiece\"\x92\t\n\x04Room\x12\n\n\x02id\x18\x01 \x01(\x03\x12\r\n\x05idStr\x18\x02 \x01(\t\x12\x0e\n\x06status\x18\x03 \x01(\x03\x12\x13\n\x0bownerUserId\x18\x04 \x01(\x03\x12\r\n\x05title\x18\x05 \x01(\t\x12\x11\n\tuserCount\x18\x06 \x01(\x03\x12\x12\n\ncreateTime\x18\x07 \x01(\x03\x12\x15\n\rlinkmicLayout\x18\x08 \x01(\x03\x12\x12\n\nfinishTime\x18\t \x01(\x03\x12\x19\n\x05\x65xtra\x18\n \x01(\x0b\x32\n.RoomExtra\x12\x17\n\x0f\x64ynamicCoverUri\x18\x0b \x01(\t\x12\x35\n\x10\x64ynamicCoverDict\x18\x0c \x03(\x0b\x32\x1b.Room.DynamicCoverDictEntry\x12\x14\n\x0clastPingTime\x18\r \x01(\x03\x12\x0e\n\x06liveId\x18\x0e \x01(\x03\x12\x16\n\x0estreamProvider\x18\x0f \x01(\x03\x12\x0e\n\x06osType\x18\x10 \x01(\x03\x12\x15\n\rclientVersion\x18\x11 \x01(\x03\x12\x13\n\x0bwithLinkmic\x18\x12 \x01(\x08\x12\x1d\n\x15\x65nableRoomPerspective\x18\x13 \x01(\x08\x12\x15\n\x05\x63over\x18\x14 \x01(\x0b\x32\x06.Image\x12\x1c\n\x0c\x64ynamicCover\x18\x15 \x01(\x0b\x32\x06.Image\x12\x1f\n\x0f\x64ynamicCoverLow\x18\x16 \x01(\x0b\x32\x06.Image\x12\x10\n\x08shareUrl\x18\x17 \x01(\t\x12\x17\n\x0f\x61nchorShareText\x18\x18 \x01(\t\x12\x15\n\ruserShareText\x18\x19 \x01(\t\x12\x10\n\x08streamId\x18\x1a \x01(\x03\x12\x13\n\x0bstreamIdStr\x18\x1b \x01(\t\x12\x1d\n\tstreamUrl\x18\x1c \x01(\x0b\x32\n.StreamUrl\x12\x14\n\x0cmosaicStatus\x18\x1d \x01(\x03\x12\x11\n\tmosaicTip\x18\x1e \x01(\t\x12\x11\n\tcellStyle\x18\x1f \x01(\x03\x12\x19\n\x07linkMic\x18  \x01(\x0b\x32\x08.LinkMic\x12\x15\n\rluckymoneyNum\x18! \x01(\x03\x12\x1d\n\x08\x64\x65\x63oList\x18\" \x03(\x0b\x32\x0b.Decoration\x12\x18\n\x07topFans\x18# \x03(\x0b\x32\x07.TopFan\x12\x19\n\x05stats\x18$ \x01(\x0b\x32\n.RoomStats\x12\x1b\n\x13sunDailyIconContent\x18% \x01(\t\x12\x10\n\x08\x64istance\x18& \x01(\t\x12\x14\n\x0c\x64istanceCity\x18\' \x01(\t\x12\x10\n\x08location\x18( \x01(\t\x12\x14\n\x0crealDistance\x18) \x01(\t\x12\x1d\n\rfeedRoomLabel\x18* \x01(\x0b\x32\x06.Image\x12\x17\n\x0f\x63ommonLabelList\x18+ \x01(\t\x12&\n\x0flivingRoomAttrs\x18, \x01(\x0b\x32\r.RoomUserAttr\x12\x14\n\x0c\x61\x64minUserIds\x18- \x03(\x03\x12\x14\n\x05owner\x18. \x01(\x0b\x32\x05.User\x12\x13\n\x0bprivateInfo\x18/ \x01(\t\x1a\x37\n\x15\x44ynamicCoverDictEntry\x12\x0b\n\x03key\x18\x01 \x01(\x03\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\x0b\n\tRoomExtra\"\x0b\n\tRoomStats\"\x0e\n\x0cRoomUserAttr\"\x0b\n\tStreamUrl\"\t\n\x07LinkMic\"\x0c\n\nDecoration\"\x08\n\x06TopFan\"\xf2\x14\n\x04User\x12\n\n\x02id\x18\x01 \x01(\x03\x12\x0f\n\x07shortId\x18\x02 \x01(\x03\x12\x10\n\x08nickname\x18\x03 \x01(\t\x12\x0e\n\x06gender\x18\x04 \x01(\x05\x12\x11\n\tsignature\x18\x05 \x01(\t\x12\r\n\x05level\x18\x06 \x01(\x05\x12\x10\n\x08\x62irthday\x18\x07 \x01(\x03\x12\x11\n\ttelephone\x18\x08 \x01(\t\x12\x1b\n\x0b\x61vatarThumb\x18\t \x01(\x0b\x32\x06.Image\x12\x1c\n\x0c\x61vatarMedium\x18\n \x01(\x0b\x32\x06.Image\x12\x1b\n\x0b\x61vatarLarge\x18\x0b \x01(\x0b\x32\x06.Image\x12\x10\n\x08verified\x18\x0c \x01(\x08\x12\x12\n\nexperience\x18\r \x01(\x05\x12\x0c\n\x04\x63ity\x18\x0e \x01(\t\x12\x0e\n\x06status\x18\x0f \x01(\x05\x12\x12\n\ncreateTime\x18\x10 \x01(\x03\x12\x12\n\nmodifyTime\x18\x11 \x01(\x03\x12\x0e\n\x06secret\x18\x12 \x01(\x05\x12\x16\n\x0eshareQrcodeUri\x18\x13 \x01(\t\x12\x1a\n\x12incomeSharePercent\x18\x14 \x01(\x05\x12\x1e\n\x0e\x62\x61\x64geImageList\x18\x15 \x01(\x0b\x32\x06.Image\x12$\n\nfollowInfo\x18\x16 \x01(\x0b\x32\x10.User.FollowInfo\x12 \n\x08payGrade\x18\x17 \x01(\x0b\x32\x0e.User.PayGrade\x12 \n\x08\x66\x61nsClub\x18\x18 \x01(\x0b\x32\x0e.User.FansClub\x12\x1c\n\x06\x62order\x18\x19 \x01(\x0b\x32\x0c.User.Border\x12\x11\n\tspecialId\x18\x1a \x01(\t\x12\x1c\n\x0c\x61vatarBorder\x18\x1b \x01(\x0b\x32\x06.Image\x12\x15\n\x05medal\x18\x1c \x01(\x0b\x32\x06.Image\x12\x1d\n\rrealTimeIcons\x18\x1d \x03(\x0b\x32\x06.Image\x12 \n\x10newRealTimeIcons\x18\x1e \x03(\x0b\x32\x06.Image\x12\x10\n\x08topVipNo\x18\x1f \x01(\x03\x12 \n\x08userAttr\x18  \x01(\x0b\x32\x0e.User.UserAttr\x12\x1e\n\x07ownRoom\x18! \x01(\x0b\x32\r.User.OwnRoom\x12\x10\n\x08payScore\x18\" \x01(\x03\x12\x13\n\x0bticketCount\x18# \x01(\x03\x12$\n\nanchorInfo\x18$ \x01(\x0b\x32\x10.User.AnchorInfo\x12\x14\n\x0clinkMicStats\x18% \x01(\x05\x12\x11\n\tdisplayId\x18& \x01(\t\x1a\n\n\x08UserAttr\x1a\t\n\x07OwnRoom\x1a\x0c\n\nAnchorInfo\x1ay\n\nFollowInfo\x12\x16\n\x0e\x66ollowingCount\x18\x01 \x01(\x03\x12\x15\n\rfollowerCount\x18\x02 \x01(\x03\x12\x14\n\x0c\x66ollowStatus\x18\x03 \x01(\x03\x12\x12\n\npushStatus\x18\x04 \x01(\x03\x12\x12\n\nremarkName\x18\x05 \x01(\t\x1a\xfd\x03\n\x08\x46\x61nsClub\x12)\n\x04\x64\x61ta\x18\x01 \x01(\x0b\x32\x1b.User.FansClub.FansClubData\x12\x32\n\npreferData\x18\x02 \x03(\x0b\x32\x1e.User.FansClub.PreferDataEntry\x1aN\n\x0fPreferDataEntry\x12\x0b\n\x03key\x18\x01 \x01(\x05\x12*\n\x05value\x18\x02 \x01(\x0b\x32\x1b.User.FansClub.FansClubData:\x02\x38\x01\x1a\xc1\x02\n\x0c\x46\x61nsClubData\x12\x10\n\x08\x63lubName\x18\x01 \x01(\t\x12\r\n\x05level\x18\x02 \x01(\x05\x12\x1a\n\x12userFansClubStatus\x18\x03 \x01(\x05\x12\x34\n\x05\x62\x61\x64ge\x18\x04 \x01(\x0b\x32%.User.FansClub.FansClubData.UserBadge\x12\x18\n\x10\x61vailableGiftIds\x18\x05 \x03(\x03\x12\x10\n\x08\x61nchorId\x18\x06 \x01(\x03\x1a\x91\x01\n\tUserBadge\x12?\n\x05icons\x18\x01 \x03(\x0b\x32\x30.User.FansClub.FansClubData.UserBadge.IconsEntry\x12\r\n\x05title\x18\x02 \x01(\t\x1a\x34\n\nIconsEntry\x12\x0b\n\x03key\x18\x01 \x01(\x05\x12\x15\n\x05value\x18\x02 \x01(\x0b\x32\x06.Image:\x02\x38\x01\x1a\x08\n\x06\x42order\x1a\xc7\x01\n\rGradeBuffInfo\x12\x11\n\tbuffLevel\x18\x01 \x01(\x03\x12\x0e\n\x06status\x18\x02 \x01(\x05\x12\x0f\n\x07\x65ndTime\x18\x03 \x01(\x03\x12\x35\n\tstatsInfo\x18\x04 \x03(\x0b\x32\".User.GradeBuffInfo.StatsInfoEntry\x12\x19\n\tbuffBadge\x18\x05 \x01(\x0b\x32\x06.Image\x1a\x30\n\x0eStatsInfoEntry\x12\x0b\n\x03key\x18\x01 \x01(\x03\x12\r\n\x05value\x18\x02 \x01(\x03:\x02\x38\x01\x1a\xec\x06\n\x08PayGrade\x12\x19\n\x11totalDiamondCount\x18\x01 \x01(\x03\x12\x1b\n\x0b\x64iamondIcon\x18\x02 \x01(\x0b\x32\x06.Image\x12\x0c\n\x04name\x18\x03 \x01(\t\x12\x14\n\x04icon\x18\x04 \x01(\x0b\x32\x06.Image\x12\x10\n\x08nextName\x18\x05 \x01(\t\x12\r\n\x05level\x18\x06 \x01(\x03\x12\x18\n\x08nextIcon\x18\x07 \x01(\x0b\x32\x06.Image\x12\x13\n\x0bnextDiamond\x18\x08 \x01(\x03\x12\x12\n\nnowDiamond\x18\t \x01(\x03\x12\x1b\n\x13thisGradeMinDiamond\x18\n \x01(\x03\x12\x1b\n\x13thisGradeMaxDiamond\x18\x0b \x01(\x03\x12\x15\n\rpayDiamondBak\x18\x0c \x01(\x03\x12\x15\n\rgradeDescribe\x18\r \x01(\t\x12/\n\rgradeIconList\x18\x0e \x03(\x0b\x32\x18.User.PayGrade.GradeIcon\x12\x16\n\x0escreenChatType\x18\x0f \x01(\x03\x12\x16\n\x06imIcon\x18\x10 \x01(\x0b\x32\x06.Image\x12\x1f\n\x0fimIconWithLevel\x18\x11 \x01(\x0b\x32\x06.Image\x12\x18\n\x08liveIcon\x18\x12 \x01(\x0b\x32\x06.Image\x12\"\n\x12newImIconWithLevel\x18\x13 \x01(\x0b\x32\x06.Image\x12\x1b\n\x0bnewLiveIcon\x18\x14 \x01(\x0b\x32\x06.Image\x12\x1a\n\x12upgradeNeedConsume\x18\x15 \x01(\x03\x12\x16\n\x0enextPrivileges\x18\x16 \x01(\t\x12\x1a\n\nbackground\x18\x17 \x01(\x0b\x32\x06.Image\x12\x1e\n\x0e\x62\x61\x63kgroundBack\x18\x18 \x01(\x0b\x32\x06.Image\x12\r\n\x05score\x18\x19 \x01(\x03\x12%\n\x08\x62uffInfo\x18\x1a \x01(\x0b\x32\x13.User.GradeBuffInfo\x12\x14\n\x0bgradeBanner\x18\xe9\x07 \x01(\t\x12 \n\x0fprofileDialogBg\x18\xea\x07 \x01(\x0b\x32\x06.Image\x12$\n\x13profileDialogBgBack\x18\xeb\x07 \x01(\x0b\x32\x06.Image\x1aW\n\tGradeIcon\x12\x14\n\x04icon\x18\x01 \x01(\x0b\x32\x06.Image\x12\x13\n\x0biconDiamond\x18\x02 \x01(\x03\x12\r\n\x05level\x18\x03 \x01(\x03\x12\x10\n\x08levelStr\x18\x04 \x01(\t\"\xa5\x01\n\nTextFormat\x12\r\n\x05\x63olor\x18\x01 \x01(\t\x12\x0c\n\x04\x62old\x18\x02 \x01(\x08\x12\x0e\n\x06italic\x18\x03 \x01(\x08\x12\x0e\n\x06weight\x18\x04 \x01(\x05\x12\x13\n\x0bitalicAngle\x18\x05 \x01(\x05\x12\x10\n\x08\x66ontSize\x18\x06 \x01(\x05\x12\x1c\n\x14userHeightLightColor\x18\x07 \x01(\x08\x12\x15\n\ruseRemoteClor\x18\x08 \x01(\x08\"n\n\tTextPiece\x12\x0c\n\x04type\x18\x01 \x01(\x05\x12\x1b\n\x06\x66ormat\x18\x02 \x01(\x0b\x32\x0b.TextFormat\x12\x13\n\x0bstringValue\x18\x0b \x01(\t\x12!\n\tuserValue\x18\x15 \x01(\x0b\x32\x0e.TextPieceUser\"\x86\x02\n\x05Image\x12\x0f\n\x07urlList\x18\x01 \x03(\t\x12\x0b\n\x03uri\x18\x02 \x01(\t\x12\x0e\n\x06height\x18\x03 \x01(\x03\x12\r\n\x05width\x18\x04 \x01(\x03\x12\x10\n\x08\x61vgColor\x18\x05 \x01(\t\x12\x11\n\timageType\x18\x06 \x01(\x05\x12\x12\n\nopenWebUrl\x18\x07 \x01(\t\x12\x1f\n\x07\x63ontent\x18\x08 \x01(\x0b\x32\x0e.Image.Content\x12\x12\n\nisAnimated\x18\t \x01(\x08\x1aR\n\x07\x43ontent\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x11\n\tfontColor\x18\x02 \x01(\t\x12\r\n\x05level\x18\x03 \x01(\x03\x12\x17\n\x0f\x61lternativeText\x18\x04 \x01(\t\"7\n\rTextPieceUser\x12\x13\n\x04user\x18\x01 \x01(\x0b\x32\x05.User\x12\x11\n\twithColon\x18\x02 \x01(\x08\"g\n\x10PublicAreaCommon\x12\x19\n\tuserLabel\x18\x01 \x01(\x0b\x32\x06.Image\x12\x19\n\x11userConsumeInRoom\x18\x02 \x01(\x03\x12\x1d\n\x15userSendGiftCntInRoom\x18\x03 \x01(\x03\"Q\n\x0eGiftIMPriority\x12\x12\n\nqueueSizes\x18\x01 \x03(\x03\x12\x19\n\x11selfQueuePriority\x18\x02 \x01(\x03\x12\x10\n\x08priority\x18\x03 \x01(\x03\"\xb9\x01\n\x0cGiftTrayInfo\x12\x1e\n\x0ftrayDisplayText\x18\x01 \x01(\x0b\x32\x05.Text\x12\x1b\n\x0btrayBaseImg\x18\x02 \x01(\x0b\x32\x06.Image\x12\x1b\n\x0btrayHeadImg\x18\x03 \x01(\x0b\x32\x06.Image\x12\x1c\n\x0ctrayRightImg\x18\x04 \x01(\x0b\x32\x06.Image\x12\x11\n\ttrayLevel\x18\x05 \x01(\x03\x12\x1e\n\x0etrayDynamicImg\x18\x06 \x01(\x0b\x32\x06.Image\"\x84\x0c\n\nGiftStruct\x12\x15\n\x05image\x18\x01 \x01(\x0b\x32\x06.Image\x12\x10\n\x08\x64\x65scribe\x18\x02 \x01(\t\x12\x0e\n\x06notify\x18\x03 \x01(\x08\x12\x10\n\x08\x64uration\x18\x04 \x01(\x03\x12\n\n\x02id\x18\x05 \x01(\x03\x12\x38\n\x0c\x66\x61nsclubInfo\x18\x06 \x01(\x0b\x32\".GiftStruct.GiftStructFansClubInfo\x12\x12\n\nforLinkmic\x18\x07 \x01(\x08\x12\x0e\n\x06\x64oodle\x18\x08 \x01(\x08\x12\x13\n\x0b\x66orFansclub\x18\t \x01(\x08\x12\r\n\x05\x63ombo\x18\n \x01(\x08\x12\x0c\n\x04type\x18\x0b \x01(\x05\x12\x14\n\x0c\x64iamondCount\x18\x0c \x01(\x05\x12\x1a\n\x12isDisplayedOnPanel\x18\r \x01(\x05\x12\x17\n\x0fprimaryEffectId\x18\x0e \x01(\x03\x12\x1d\n\rgiftLabelIcon\x18\x0f \x01(\x0b\x32\x06.Image\x12\x0c\n\x04name\x18\x10 \x01(\t\x12\x0e\n\x06region\x18\x11 \x01(\t\x12\x0e\n\x06manual\x18\x12 \x01(\t\x12\x11\n\tforCustom\x18\x13 \x01(\x08\x12\x37\n\x0especialEffects\x18\x14 \x03(\x0b\x32\x1f.GiftStruct.SpecialEffectsEntry\x12\x14\n\x04icon\x18\x15 \x01(\x0b\x32\x06.Image\x12\x12\n\nactionType\x18\x16 \x01(\x05\x12\x17\n\x0fwatermelonSeeds\x18\x17 \x01(\x05\x12\x12\n\ngoldEffect\x18\x18 \x01(\t\x12!\n\x04subs\x18\x19 \x03(\x0b\x32\x13.LuckyMoneyGiftMeta\x12\x13\n\x0bgoldenBeans\x18\x1a \x01(\x03\x12\x12\n\nhonorLevel\x18\x1b \x01(\x03\x12\x10\n\x08itemType\x18\x1c \x01(\x05\x12\x11\n\tschemeUrl\x18\x1d \x01(\t\x12*\n\rgiftOperation\x18\x1e \x01(\x0b\x32\x13.GiftPanelOperation\x12\x11\n\teventName\x18\x1f \x01(\t\x12\x12\n\nnobleLevel\x18  \x01(\x03\x12\x10\n\x08guideUrl\x18! \x01(\t\x12\x16\n\x0epunishMedicine\x18\" \x01(\x08\x12\x11\n\tforPortal\x18# \x01(\x08\x12\x14\n\x0c\x62usinessText\x18$ \x01(\t\x12\x0f\n\x07\x63nyGift\x18% \x01(\x08\x12\r\n\x05\x61ppId\x18& \x01(\x03\x12\x10\n\x08vipLevel\x18\' \x01(\x03\x12\x0e\n\x06isGray\x18( \x01(\x08\x12\x15\n\rgraySchemeUrl\x18) \x01(\t\x12\x11\n\tgiftScene\x18* \x01(\x03\x12\x1f\n\ngiftBanner\x18+ \x01(\x0b\x32\x0b.GiftBanner\x12\x14\n\x0ctriggerWords\x18, \x03(\t\x12$\n\rgiftBuffInfos\x18- \x03(\x0b\x32\r.GiftBuffInfo\x12\x18\n\x10\x66orFirstRecharge\x18. \x01(\x08\x12%\n\x15\x64ynamicImgForSelected\x18/ \x01(\x0b\x32\x06.Image\x12\x17\n\x0f\x61\x66terSendAction\x18\x30 \x01(\x05\x12\x17\n\x0fgiftOfflineTime\x18\x31 \x01(\x03\x12\x12\n\ntopBarText\x18\x32 \x01(\t\x12\x1e\n\x0etopRightAvatar\x18\x33 \x01(\x0b\x32\x06.Image\x12\x17\n\x0f\x62\x61nnerSchemeUrl\x18\x34 \x01(\t\x12\x10\n\x08isLocked\x18\x35 \x01(\x08\x12\x14\n\x0creqExtraType\x18\x36 \x01(\x03\x12\x10\n\x08\x61ssetIds\x18\x37 \x03(\x03\x12)\n\x0fgiftPreviewInfo\x18\x38 \x01(\x0b\x32\x10.GiftPreviewInfo\x12\x19\n\x07giftTip\x18\x39 \x01(\x0b\x32\x08.GiftTip\x12\x1b\n\x13needSweepLightCount\x18: \x01(\x05\x12!\n\tgroupInfo\x18; \x03(\x0b\x32\x0e.GiftGroupInfo\x1a\x35\n\x13SpecialEffectsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\x03:\x02\x38\x01\x1a=\n\x16GiftStructFansClubInfo\x12\x10\n\x08minLevel\x18\x01 \x01(\x05\x12\x11\n\tinsertPos\x18\x02 \x01(\x05\"\x14\n\x12\x41ssetEffectMixInfo\"\x14\n\x12LuckyMoneyGiftMeta\"\x14\n\x12GiftPanelOperation\"\x0c\n\nGiftBanner\"\x0e\n\x0cGiftBuffInfo\"\x11\n\x0fGiftPreviewInfo\"\t\n\x07GiftTip\"\x0f\n\rGiftGroupInfo\"\x14\n\x12\x45\x66\x66\x65\x63tMixImageInfob\x06proto3'
 )
 
 
@@ -1486,8 +1486,8 @@ _ROOM_DYNAMICCOVERDICTENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4849,
-  serialized_end=4904,
+  serialized_start=4954,
+  serialized_end=5009,
 )
 
 _ROOM = _descriptor.Descriptor(
@@ -1799,6 +1799,34 @@ _ROOM = _descriptor.Descriptor(
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='livingRoomAttrs', full_name='Room.livingRoomAttrs', index=43,
+      number=44, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='adminUserIds', full_name='Room.adminUserIds', index=44,
+      number=45, type=3, cpp_type=2, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='owner', full_name='Room.owner', index=45,
+      number=46, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='privateInfo', full_name='Room.privateInfo', index=46,
+      number=47, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -1812,7 +1840,7 @@ _ROOM = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=3839,
-  serialized_end=4904,
+  serialized_end=5009,
 )
 
 
@@ -1836,8 +1864,8 @@ _ROOMEXTRA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4906,
-  serialized_end=4917,
+  serialized_start=5011,
+  serialized_end=5022,
 )
 
 
@@ -1861,8 +1889,33 @@ _ROOMSTATS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4919,
-  serialized_end=4930,
+  serialized_start=5024,
+  serialized_end=5035,
+)
+
+
+_ROOMUSERATTR = _descriptor.Descriptor(
+  name='RoomUserAttr',
+  full_name='RoomUserAttr',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+  ],
+  extensions=[
+  ],
+  nested_types=[],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=5037,
+  serialized_end=5051,
 )
 
 
@@ -1886,8 +1939,8 @@ _STREAMURL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4932,
-  serialized_end=4943,
+  serialized_start=5053,
+  serialized_end=5064,
 )
 
 
@@ -1911,8 +1964,8 @@ _LINKMIC = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4945,
-  serialized_end=4954,
+  serialized_start=5066,
+  serialized_end=5075,
 )
 
 
@@ -1936,8 +1989,8 @@ _DECORATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4956,
-  serialized_end=4968,
+  serialized_start=5077,
+  serialized_end=5089,
 )
 
 
@@ -1961,8 +2014,8 @@ _TOPFAN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4970,
-  serialized_end=4978,
+  serialized_start=5091,
+  serialized_end=5099,
 )
 
 
@@ -1986,8 +2039,8 @@ _USER_USERATTR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5894,
-  serialized_end=5904,
+  serialized_start=6015,
+  serialized_end=6025,
 )
 
 _USER_OWNROOM = _descriptor.Descriptor(
@@ -2010,8 +2063,8 @@ _USER_OWNROOM = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5906,
-  serialized_end=5915,
+  serialized_start=6027,
+  serialized_end=6036,
 )
 
 _USER_ANCHORINFO = _descriptor.Descriptor(
@@ -2034,8 +2087,8 @@ _USER_ANCHORINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5917,
-  serialized_end=5929,
+  serialized_start=6038,
+  serialized_end=6050,
 )
 
 _USER_FOLLOWINFO = _descriptor.Descriptor(
@@ -2093,8 +2146,8 @@ _USER_FOLLOWINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5931,
-  serialized_end=6052,
+  serialized_start=6052,
+  serialized_end=6173,
 )
 
 _USER_FANSCLUB_PREFERDATAENTRY = _descriptor.Descriptor(
@@ -2131,8 +2184,8 @@ _USER_FANSCLUB_PREFERDATAENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6162,
-  serialized_end=6240,
+  serialized_start=6283,
+  serialized_end=6361,
 )
 
 _USER_FANSCLUB_FANSCLUBDATA_USERBADGE_ICONSENTRY = _descriptor.Descriptor(
@@ -2169,8 +2222,8 @@ _USER_FANSCLUB_FANSCLUBDATA_USERBADGE_ICONSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6512,
-  serialized_end=6564,
+  serialized_start=6633,
+  serialized_end=6685,
 )
 
 _USER_FANSCLUB_FANSCLUBDATA_USERBADGE = _descriptor.Descriptor(
@@ -2207,8 +2260,8 @@ _USER_FANSCLUB_FANSCLUBDATA_USERBADGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6419,
-  serialized_end=6564,
+  serialized_start=6540,
+  serialized_end=6685,
 )
 
 _USER_FANSCLUB_FANSCLUBDATA = _descriptor.Descriptor(
@@ -2273,8 +2326,8 @@ _USER_FANSCLUB_FANSCLUBDATA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6243,
-  serialized_end=6564,
+  serialized_start=6364,
+  serialized_end=6685,
 )
 
 _USER_FANSCLUB = _descriptor.Descriptor(
@@ -2311,8 +2364,8 @@ _USER_FANSCLUB = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6055,
-  serialized_end=6564,
+  serialized_start=6176,
+  serialized_end=6685,
 )
 
 _USER_BORDER = _descriptor.Descriptor(
@@ -2335,8 +2388,8 @@ _USER_BORDER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6566,
-  serialized_end=6574,
+  serialized_start=6687,
+  serialized_end=6695,
 )
 
 _USER_GRADEBUFFINFO_STATSINFOENTRY = _descriptor.Descriptor(
@@ -2373,8 +2426,8 @@ _USER_GRADEBUFFINFO_STATSINFOENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6728,
-  serialized_end=6776,
+  serialized_start=6849,
+  serialized_end=6897,
 )
 
 _USER_GRADEBUFFINFO = _descriptor.Descriptor(
@@ -2432,8 +2485,8 @@ _USER_GRADEBUFFINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6577,
-  serialized_end=6776,
+  serialized_start=6698,
+  serialized_end=6897,
 )
 
 _USER_PAYGRADE_GRADEICON = _descriptor.Descriptor(
@@ -2484,8 +2537,8 @@ _USER_PAYGRADE_GRADEICON = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7568,
-  serialized_end=7655,
+  serialized_start=7689,
+  serialized_end=7776,
 )
 
 _USER_PAYGRADE = _descriptor.Descriptor(
@@ -2711,8 +2764,8 @@ _USER_PAYGRADE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6779,
-  serialized_end=7655,
+  serialized_start=6900,
+  serialized_end=7776,
 )
 
 _USER = _descriptor.Descriptor(
@@ -3001,8 +3054,8 @@ _USER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4981,
-  serialized_end=7655,
+  serialized_start=5102,
+  serialized_end=7776,
 )
 
 
@@ -3082,8 +3135,8 @@ _TEXTFORMAT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7658,
-  serialized_end=7823,
+  serialized_start=7779,
+  serialized_end=7944,
 )
 
 
@@ -3135,19 +3188,47 @@ _TEXTPIECE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7825,
-  serialized_end=7935,
+  serialized_start=7946,
+  serialized_end=8056,
 )
 
 
-_IMAGE = _descriptor.Descriptor(
-  name='Image',
-  full_name='Image',
+_IMAGE_CONTENT = _descriptor.Descriptor(
+  name='Content',
+  full_name='Image.Content',
   filename=None,
   file=DESCRIPTOR,
   containing_type=None,
   create_key=_descriptor._internal_create_key,
   fields=[
+    _descriptor.FieldDescriptor(
+      name='name', full_name='Image.Content.name', index=0,
+      number=1, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='fontColor', full_name='Image.Content.fontColor', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='level', full_name='Image.Content.level', index=2,
+      number=3, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='alternativeText', full_name='Image.Content.alternativeText', index=3,
+      number=4, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -3160,8 +3241,95 @@ _IMAGE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7937,
-  serialized_end=7944,
+  serialized_start=8239,
+  serialized_end=8321,
+)
+
+_IMAGE = _descriptor.Descriptor(
+  name='Image',
+  full_name='Image',
+  filename=None,
+  file=DESCRIPTOR,
+  containing_type=None,
+  create_key=_descriptor._internal_create_key,
+  fields=[
+    _descriptor.FieldDescriptor(
+      name='urlList', full_name='Image.urlList', index=0,
+      number=1, type=9, cpp_type=9, label=3,
+      has_default_value=False, default_value=[],
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='uri', full_name='Image.uri', index=1,
+      number=2, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='height', full_name='Image.height', index=2,
+      number=3, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='width', full_name='Image.width', index=3,
+      number=4, type=3, cpp_type=2, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='avgColor', full_name='Image.avgColor', index=4,
+      number=5, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='imageType', full_name='Image.imageType', index=5,
+      number=6, type=5, cpp_type=1, label=1,
+      has_default_value=False, default_value=0,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='openWebUrl', full_name='Image.openWebUrl', index=6,
+      number=7, type=9, cpp_type=9, label=1,
+      has_default_value=False, default_value=b"".decode('utf-8'),
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='content', full_name='Image.content', index=7,
+      number=8, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+    _descriptor.FieldDescriptor(
+      name='isAnimated', full_name='Image.isAnimated', index=8,
+      number=9, type=8, cpp_type=7, label=1,
+      has_default_value=False, default_value=False,
+      message_type=None, enum_type=None, containing_type=None,
+      is_extension=False, extension_scope=None,
+      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+  ],
+  extensions=[
+  ],
+  nested_types=[_IMAGE_CONTENT, ],
+  enum_types=[
+  ],
+  serialized_options=None,
+  is_extendable=False,
+  syntax='proto3',
+  extension_ranges=[],
+  oneofs=[
+  ],
+  serialized_start=8059,
+  serialized_end=8321,
 )
 
 
@@ -3199,8 +3367,8 @@ _TEXTPIECEUSER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=7946,
-  serialized_end=8001,
+  serialized_start=8323,
+  serialized_end=8378,
 )
 
 
@@ -3245,8 +3413,8 @@ _PUBLICAREACOMMON = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8003,
-  serialized_end=8106,
+  serialized_start=8380,
+  serialized_end=8483,
 )
 
 
@@ -3291,8 +3459,8 @@ _GIFTIMPRIORITY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8108,
-  serialized_end=8189,
+  serialized_start=8485,
+  serialized_end=8566,
 )
 
 
@@ -3358,8 +3526,8 @@ _GIFTTRAYINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8192,
-  serialized_end=8377,
+  serialized_start=8569,
+  serialized_end=8754,
 )
 
 
@@ -3397,8 +3565,8 @@ _GIFTSTRUCT_SPECIALEFFECTSENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9804,
-  serialized_end=9857,
+  serialized_start=10181,
+  serialized_end=10234,
 )
 
 _GIFTSTRUCT_GIFTSTRUCTFANSCLUBINFO = _descriptor.Descriptor(
@@ -3435,8 +3603,8 @@ _GIFTSTRUCT_GIFTSTRUCTFANSCLUBINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9859,
-  serialized_end=9920,
+  serialized_start=10236,
+  serialized_end=10297,
 )
 
 _GIFTSTRUCT = _descriptor.Descriptor(
@@ -3872,8 +4040,8 @@ _GIFTSTRUCT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=8380,
-  serialized_end=9920,
+  serialized_start=8757,
+  serialized_end=10297,
 )
 
 
@@ -3897,8 +4065,8 @@ _ASSETEFFECTMIXINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9922,
-  serialized_end=9942,
+  serialized_start=10299,
+  serialized_end=10319,
 )
 
 
@@ -3922,8 +4090,8 @@ _LUCKYMONEYGIFTMETA = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9944,
-  serialized_end=9964,
+  serialized_start=10321,
+  serialized_end=10341,
 )
 
 
@@ -3947,8 +4115,8 @@ _GIFTPANELOPERATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9966,
-  serialized_end=9986,
+  serialized_start=10343,
+  serialized_end=10363,
 )
 
 
@@ -3972,8 +4140,8 @@ _GIFTBANNER = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=9988,
-  serialized_end=10000,
+  serialized_start=10365,
+  serialized_end=10377,
 )
 
 
@@ -3997,8 +4165,8 @@ _GIFTBUFFINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10002,
-  serialized_end=10016,
+  serialized_start=10379,
+  serialized_end=10393,
 )
 
 
@@ -4022,8 +4190,8 @@ _GIFTPREVIEWINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10018,
-  serialized_end=10035,
+  serialized_start=10395,
+  serialized_end=10412,
 )
 
 
@@ -4047,8 +4215,8 @@ _GIFTTIP = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10037,
-  serialized_end=10046,
+  serialized_start=10414,
+  serialized_end=10423,
 )
 
 
@@ -4072,8 +4240,8 @@ _GIFTGROUPINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10048,
-  serialized_end=10063,
+  serialized_start=10425,
+  serialized_end=10440,
 )
 
 
@@ -4097,8 +4265,8 @@ _EFFECTMIXIMAGEINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=10065,
-  serialized_end=10085,
+  serialized_start=10442,
+  serialized_end=10462,
 )
 
 _RESPONSE_ROUTEPARAMSENTRY.containing_type = _RESPONSE
@@ -4169,6 +4337,8 @@ _ROOM.fields_by_name['decoList'].message_type = _DECORATION
 _ROOM.fields_by_name['topFans'].message_type = _TOPFAN
 _ROOM.fields_by_name['stats'].message_type = _ROOMSTATS
 _ROOM.fields_by_name['feedRoomLabel'].message_type = _IMAGE
+_ROOM.fields_by_name['livingRoomAttrs'].message_type = _ROOMUSERATTR
+_ROOM.fields_by_name['owner'].message_type = _USER
 _USER_USERATTR.containing_type = _USER
 _USER_OWNROOM.containing_type = _USER
 _USER_ANCHORINFO.containing_type = _USER
@@ -4223,6 +4393,8 @@ _USER.fields_by_name['ownRoom'].message_type = _USER_OWNROOM
 _USER.fields_by_name['anchorInfo'].message_type = _USER_ANCHORINFO
 _TEXTPIECE.fields_by_name['format'].message_type = _TEXTFORMAT
 _TEXTPIECE.fields_by_name['userValue'].message_type = _TEXTPIECEUSER
+_IMAGE_CONTENT.containing_type = _IMAGE
+_IMAGE.fields_by_name['content'].message_type = _IMAGE_CONTENT
 _TEXTPIECEUSER.fields_by_name['user'].message_type = _USER
 _PUBLICAREACOMMON.fields_by_name['userLabel'].message_type = _IMAGE
 _GIFTTRAYINFO.fields_by_name['trayDisplayText'].message_type = _TEXT
@@ -4259,6 +4431,7 @@ DESCRIPTOR.message_types_by_name['Text'] = _TEXT
 DESCRIPTOR.message_types_by_name['Room'] = _ROOM
 DESCRIPTOR.message_types_by_name['RoomExtra'] = _ROOMEXTRA
 DESCRIPTOR.message_types_by_name['RoomStats'] = _ROOMSTATS
+DESCRIPTOR.message_types_by_name['RoomUserAttr'] = _ROOMUSERATTR
 DESCRIPTOR.message_types_by_name['StreamUrl'] = _STREAMURL
 DESCRIPTOR.message_types_by_name['LinkMic'] = _LINKMIC
 DESCRIPTOR.message_types_by_name['Decoration'] = _DECORATION
@@ -4422,6 +4595,13 @@ RoomStats = _reflection.GeneratedProtocolMessageType('RoomStats', (_message.Mess
   })
 _sym_db.RegisterMessage(RoomStats)
 
+RoomUserAttr = _reflection.GeneratedProtocolMessageType('RoomUserAttr', (_message.Message,), {
+  'DESCRIPTOR' : _ROOMUSERATTR,
+  '__module__' : 'message_pb2'
+  # @@protoc_insertion_point(class_scope:RoomUserAttr)
+  })
+_sym_db.RegisterMessage(RoomUserAttr)
+
 StreamUrl = _reflection.GeneratedProtocolMessageType('StreamUrl', (_message.Message,), {
   'DESCRIPTOR' : _STREAMURL,
   '__module__' : 'message_pb2'
@@ -4584,11 +4764,19 @@ TextPiece = _reflection.GeneratedProtocolMessageType('TextPiece', (_message.Mess
 _sym_db.RegisterMessage(TextPiece)
 
 Image = _reflection.GeneratedProtocolMessageType('Image', (_message.Message,), {
+
+  'Content' : _reflection.GeneratedProtocolMessageType('Content', (_message.Message,), {
+    'DESCRIPTOR' : _IMAGE_CONTENT,
+    '__module__' : 'message_pb2'
+    # @@protoc_insertion_point(class_scope:Image.Content)
+    })
+  ,
   'DESCRIPTOR' : _IMAGE,
   '__module__' : 'message_pb2'
   # @@protoc_insertion_point(class_scope:Image)
   })
 _sym_db.RegisterMessage(Image)
+_sym_db.RegisterMessage(Image.Content)
 
 TextPieceUser = _reflection.GeneratedProtocolMessageType('TextPieceUser', (_message.Message,), {
   'DESCRIPTOR' : _TEXTPIECEUSER,
