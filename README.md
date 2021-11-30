@@ -1,5 +1,4 @@
-﻿
-抖音web直播间([live.douyin.com](https://live.douyin.com))弹幕抓取
+﻿抖音web直播间([live.douyin.com](https://live.douyin.com))弹幕抓取
 --
 
 **屏幕效果截图**
