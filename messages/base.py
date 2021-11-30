@@ -1,5 +1,7 @@
 from store.mongo import MongoStore
 
+from config.helper import config
+
 class Base:
 
     instance = None
@@ -11,6 +13,9 @@ class Base:
         return self.instance.user
 
     def persists(self):
+        if config()['mongo']['enabled'] != 'on':
+            return
+
         try:
             store = MongoStore()
             store.set_collection('user')

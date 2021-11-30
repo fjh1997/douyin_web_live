@@ -1,9 +1,15 @@
 import sys
+from urllib.parse import urlparse
 
 from scripts import watcher, webdriver
+from config.helper import config
 
 if __name__ == '__main__':
-    webdriver.lunch(sys.argv[1])
+    if len(sys.argv) == 1 or not urlparse(sys.argv[1]).scheme:
+        print('Invalid url provided, please check...')
+        sys.exit(1)
 
-    w = watcher.Watcher(directory='/Users/geng/douyin_live')
+    webdriver.go(sys.argv[1])
+
+    w = watcher.Watcher(directory=config()['watchdog']['dir'])
     w.run()

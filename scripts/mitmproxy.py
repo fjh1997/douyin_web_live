@@ -4,10 +4,12 @@
 import uuid
 from mitmproxy import http
 
+from config.helper import config
+
 class Writer:
     def response(self, flow: http.HTTPFlow) -> None:
         if flow.request.host == 'live.douyin.com':
-            with open('/Users/geng/douyin_live/' + uuid.uuid4().hex, 'wb') as f:
+            with open(config().mitmproxy.log_dir + uuid.uuid4().hex, 'wb') as f:
                 f.write(bytes(flow.response.content))
 
 addons = [Writer()]

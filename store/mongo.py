@@ -1,9 +1,11 @@
 import pymongo
 
+from config.helper import config
+
 class MongoStore:
     def __init__(self):
-        self.client = pymongo.MongoClient("mongodb://localhost:27017/")
-        self.db = self.client['tiktok']
+        self.client = pymongo.MongoClient(config()['mongo']['uri'])
+        self.db = self.client[config()['mongo']['dbname']]
     
     def set_collection(self, collection):
         self.collection = self.db[collection]

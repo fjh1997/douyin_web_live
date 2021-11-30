@@ -1,0 +1,11 @@
+watchdog:
+  dir: '/Users/geng/douyin_live/'
+
+webdriver:
+  bin: '/usr/local/bin/chromedriver'
+  proxy: '127.0.0.1:8080'
+  
+mongo:
+  uri : 'mongodb://localhost:27017/'
+  dbname: 'tiktok'
+  enabled: 0

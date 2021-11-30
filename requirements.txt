@@ -11,6 +11,7 @@ protobuf==3.19.1
 pycparser==2.21
 pymongo==3.12.1
 pyOpenSSL==21.0.0
+PyYAML==6.0
 selenium==4.1.0
 six==1.16.0
 sniffio==1.2.0
