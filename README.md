@@ -17,7 +17,7 @@
 1. 安装[python3](https://www.python.org/downloads/)
 2. clone本项目，terminal进入项目目录，执行 `pip install requirements.txt`
 3. 安装[mitmproxy](https://mitmproxy.org/) terminal执行`mitmproxy -s scripts/mitmproxy.py` (scripts/mitmproxy.py见项目)
-4. terminal执行 `python3 main.py https://live.douyin.com/******`
+4. terminal执行 `python3 main.py 直播间链接(https://live.douyin.com/******)`
 
 **注意事项**
 
