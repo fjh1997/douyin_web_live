@@ -22,7 +22,9 @@ class Base:
 
             user = self.user()
 
-            store.insert_one({
+            store.replace_one({
+                "id": user.id
+            }, {
                 "id": user.id,
                 "shortId": user.shortId,
                 "nickname": user.nickname,
@@ -32,9 +34,10 @@ class Base:
                     "followingCount": user.followInfo.followingCount,
                     "followerCount": user.followInfo.followerCount
                 }
-            })
+            }, upsert=True)
 
             store.set_collection(self.instance.common.method)
+
             store.insert_one({
                 "msgId": self.instance.common.msgId,
                 "roomId": self.instance.common.roomId,
@@ -42,7 +45,7 @@ class Base:
                 'content': self.format_content()
             })
         except Exception as e:
-            print(self.instance.common.method + 'persists error')
+            print(self.instance.common.method + ' persists error')
 
 
     def __str__(self):

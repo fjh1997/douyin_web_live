@@ -10,6 +10,9 @@ class MongoStore:
     def set_collection(self, collection):
         self.collection = self.db[collection]
     
+    def replace_one(self, condition, data, upsert=True):
+        return self.collection.replace_one(condition, data, upsert=upsert)
+    
     def insert_one(self, data):
         return self.collection.insert_one(data)
 
