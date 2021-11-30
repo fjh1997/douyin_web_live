@@ -1,8 +1,13 @@
 import time
+import concurrent.futures
+import queue
+
 from watchdog.observers import Observer
 from watchdog.events import FileSystemEventHandler
 
 from messages.utils import unpackMsgBin
+
+q = queue.Queue()
 
 class Watcher:
     DIRECTORY_TO_WATCH = ""
@@ -18,7 +23,8 @@ class Watcher:
 
         try:
             while True:
-                time.sleep(5)
+                with concurrent.futures.ThreadPoolExecutor() as executor:
+                    executor.submit(unpackMsgBin, q.get())
         except:
             self.observer.stop()
 
@@ -33,5 +39,5 @@ class Handler(FileSystemEventHandler):
             return None
 
         elif event.event_type == 'created':
-            unpackMsgBin(event.src_path)
+            q.put(event.src_path)
 
