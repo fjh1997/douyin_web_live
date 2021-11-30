@@ -8,4 +8,4 @@ webdriver:
 mongo:
   uri : 'mongodb://localhost:27017/'
   dbname: 'tiktok'
-  enabled: 0
+  enabled: 'off'
