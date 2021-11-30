@@ -10,7 +10,7 @@
 1. Selenium detach模式打开live直播间
 2. mitmproxy 捕获live.douyin.com http请求并保存响应为指定目录下文件
 3. watchdog监控步骤2指定目录下文件变化后反序列化文件(application/protobuf格式)
-4. 反序列化弹幕消息分类后terminal输出且入库(mongo)
+4. 反序列化弹幕消息分类后terminal输出
 
 **使用方法**
 
