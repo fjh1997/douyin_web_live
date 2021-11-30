@@ -1,6 +1,7 @@
-from scripts import watcher
-
+from scripts import watcher, webdriver
 
 if __name__ == '__main__':
-    w = watcher.Watcher(directory='/Users/geng/charles/autosaved')
+    webdriver.lunch()
+
+    w = watcher.Watcher(directory='/Users/geng/douyin_live')
     w.run()

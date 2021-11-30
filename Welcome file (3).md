@@ -15,12 +15,12 @@
 
 **使用方法**
 
-1. 安装[python3](https://www.python.org/downloads/)
-2. clone本项目，terminal进入项目目录，执行 `pip install requirements.txt`
-3. 安装[mitmproxy](https://mitmproxy.org/) terminal执行`mitmproxy -s scripts/mitiproxy.py` (scripts/mitiproxy.py见项目)
-4. terminal执行 `python3 main.py`
+5. 安装[python3](https://www.python.org/downloads/)
+6. clone本项目，terminal进入项目目录，执行 `pip install requirements.txt`
+7. 安装[mitmproxy](https://mitmproxy.org/) terminal执行`mitmproxy -s scripts/mitiproxy.py` (scripts/mitiproxy.py见项目)
+8. terminal执行 `python3 main.py`
 
 **注意事项**
 
-1. 本源代码改动仅可作学习目的！！！
+1. 本源代码仅可作学习目的修改！
 2.  emm... 🤔
