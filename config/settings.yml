@@ -9,3 +9,6 @@ mongo:
   uri : 'mongodb://localhost:27017/'
   dbname: 'tiktok'
   enabled: 'on' 
+
+api:
+  userinfo: 'https://live.douyin.com/webcast/user/?aid=6383&target_uid='

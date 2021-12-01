@@ -1,3 +1,4 @@
+import traceback
 from datetime import datetime
 from store.mongo import MongoStore
 
@@ -14,7 +15,10 @@ class Base:
         return dict()
         
     def user(self):
-        return self.instance.user
+        if(hasattr(self.instance, 'user')):
+            return self.instance.user
+        
+        return None
 
     def persists(self):
         if config()['mongo']['enabled'] != 'on':
@@ -22,33 +26,31 @@ class Base:
 
         try:
             store = MongoStore()
-            store.set_collection('user')
 
             user = self.user()
+            if user is not None:
+                store.set_collection('user')
 
-            store.replace_one({
-                "id": user.id
-            }, {
-                "id": user.id,
-                "shortId": user.shortId,
-                "nickname": user.nickname,
-                "gender": user.gender,
-                "avatar_thumb": user.avatarThumb.urlList[0],
-                "followInfo": {
-                    "followingCount": user.followInfo.followingCount,
-                    "followerCount": user.followInfo.followerCount
-                }
-            }, upsert=True)
+                if not store.exists({'id': user.id}):
+                    store.insert_one({
+                        'id': user.id,
+                        'shortId': user.shortId,
+                        'nickname': user.nickname,
+                        'gender': user.gender
+                    })
 
             store.set_collection(self.instance.common.method)
-
             msg = {
                 "msgId": self.instance.common.msgId,
                 "roomId": self.instance.common.roomId,
-                "userId": user.id,
                 'content': self.format_content(),
                 'created_at': datetime.today().replace(microsecond=0)
             }
+
+            if user is not None:
+                msg.update({
+                    'userId': user.id
+                })
 
             if len(self.extra_info()):
                 msg.update(self.extra_info())
@@ -56,7 +58,7 @@ class Base:
             store.insert_one(msg)
         except Exception as e:
             print(self.instance.common.method + ' persists error')
-
+            print(traceback.format_exc())
 
     def __str__(self):
         pass

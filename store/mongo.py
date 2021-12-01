@@ -18,3 +18,6 @@ class MongoStore:
 
     def insert_many(self, data):
         return self.collection.insert_many(data)
+
+    def exists(self, condition):
+        return self.collection.count_documents(condition, limit = 1) != 0

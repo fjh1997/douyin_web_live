@@ -74,7 +74,7 @@ def decodeMsg(messages):
             elif message.method == 'WebcastRoomUserSeqMessage':
                 room_user_seq_message = RoomUserSeqMessage() 
                 room_user_seq_message.set_payload(message.payload)
-                # room_user_seq_message.persists()
+                room_user_seq_message.persists()
 
                 print(f"\n{YELLOW}[+] {room_user_seq_message} {RESET}")
 
