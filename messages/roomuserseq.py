@@ -16,4 +16,4 @@ class RoomUserSeqMessage(Base):
         return self.instance.totalUserStr
 
     def __str__(self):
-        return time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()) + '【观看人数】' + self.format_content()
+        return time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()) + '【观看人数】' + '当前在线：' + str(self.instance.total) + '，历史总计：' + self.format_content()

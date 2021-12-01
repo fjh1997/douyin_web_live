@@ -15,7 +15,7 @@ from store.mongo import MongoStore
 def go(url):
     chrome_options = Options()
     chrome_options.add_argument('--proxy-server=%s' % config()['webdriver']['proxy'])
-    # chrome_options.add_argument('--headless')
+    chrome_options.add_argument('--headless')
 
     proxy = Proxy()
     proxy.proxy_type = ProxyType.MANUAL
@@ -52,6 +52,7 @@ def go(url):
             'admin_user_ids': roomInfo['room']['admin_user_ids'],
             'owner': roomInfo['room']['owner']
         })
+        store.close()
 
         wait.until(presence_of_element_located((By.CLASS_NAME, "oSu9Aw19")))
         

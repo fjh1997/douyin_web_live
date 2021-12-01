@@ -7,6 +7,9 @@ class MongoStore:
         self.client = pymongo.MongoClient(config()['mongo']['uri'])
         self.db = self.client[config()['mongo']['dbname']]
     
+    def close(self):
+        self.client.close()
+    
     def set_collection(self, collection):
         self.collection = self.db[collection]
     

@@ -59,6 +59,8 @@ class Base:
         except Exception as e:
             print(self.instance.common.method + ' persists error')
             print(traceback.format_exc())
+        finally:
+            store.close()
 
     def __str__(self):
         pass
