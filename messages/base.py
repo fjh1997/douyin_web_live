@@ -47,7 +47,7 @@ class Base:
                 "roomId": self.instance.common.roomId,
                 "userId": user.id,
                 'content': self.format_content(),
-                'created_at': datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                'created_at': datetime.today().replace(microsecond=0)
             }
 
             if len(self.extra_info()):
