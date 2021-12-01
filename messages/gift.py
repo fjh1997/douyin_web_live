@@ -10,7 +10,7 @@ class GiftMessage(Base):
     def extra_info(self):
         return {
             'giftId': self.instance.gift.id,
-            'gitfName': self.instance.gift.name,
+            'giftName': self.instance.gift.name,
             'giftCount': self.instance.gift.diamondCount,
         }
 
