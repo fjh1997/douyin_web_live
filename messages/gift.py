@@ -7,6 +7,13 @@ class GiftMessage(Base):
     def __init__(self):
         self.instance = message_pb2.GiftMessage()
 
+    def extra_info(self):
+        return {
+            'giftId': self.instance.gift.id,
+            'gitfName': self.instance.gift.name,
+            'giftCount': self.instance.gift.diamondCount,
+        }
+
     def format_content(self):
         return self.instance.common.describe
 

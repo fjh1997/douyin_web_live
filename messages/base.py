@@ -1,3 +1,4 @@
+from datetime import datetime
 from store.mongo import MongoStore
 
 from config.helper import config
@@ -8,6 +9,9 @@ class Base:
 
     def set_payload(self, payload):
         self.instance.ParseFromString(payload)
+
+    def extra_info(self):
+        return dict()
         
     def user(self):
         return self.instance.user
@@ -38,12 +42,18 @@ class Base:
 
             store.set_collection(self.instance.common.method)
 
-            store.insert_one({
+            msg = {
                 "msgId": self.instance.common.msgId,
                 "roomId": self.instance.common.roomId,
                 "userId": user.id,
-                'content': self.format_content()
-            })
+                'content': self.format_content(),
+                'created_at': datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            }
+
+            if len(self.extra_info()):
+                msg.update(self.extra_info())
+
+            store.insert_one(msg)
         except Exception as e:
             print(self.instance.common.method + ' persists error')
 
