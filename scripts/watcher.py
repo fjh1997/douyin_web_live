@@ -39,5 +39,6 @@ class Handler(FileSystemEventHandler):
             return None
 
         elif event.event_type == 'created':
+            print('here')
             q.put(event.src_path)
 

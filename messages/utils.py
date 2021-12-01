@@ -1,3 +1,4 @@
+import os
 from protobuf import message_pb2
 
 from messages.member import MemberMessage
@@ -29,6 +30,8 @@ def unpackMsgBin(filepath):
             decodeMsg(response.messages)
     except Exception as e:
         pass
+    finally:
+        os.remove(filepath)
 
 def decodeMsg(messages):
     for message in messages:

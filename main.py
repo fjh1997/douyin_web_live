@@ -1,4 +1,5 @@
 import sys
+import threading
 from urllib.parse import urlparse
 
 from scripts import watcher, webdriver
@@ -9,7 +10,9 @@ if __name__ == '__main__':
         print('Invalid url provided, please check...')
         sys.exit(1)
 
-    webdriver.go(sys.argv[1])
+    t = threading.Thread(target=webdriver.go, args=(sys.argv[1],))
+    t.start()
 
     w = watcher.Watcher(directory=config()['watchdog']['dir'])
     w.run()
+    
